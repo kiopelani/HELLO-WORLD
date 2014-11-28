@@ -17,6 +17,13 @@ Rails.application.routes.draw do
   get 'dashboard/music/spotify_authenticate' => 'music#spotify_authenticate', as: 'spotify_authenticate'
 
 
+  get 'dashboard/stocks' => 'stocks#index'
+  post 'dashboard/stocks/edit' => 'stocks#edit'
+
+  get 'dashboard/news' => 'news#index'
+  get 'dashboard/weather' => 'weather#index'
+
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
