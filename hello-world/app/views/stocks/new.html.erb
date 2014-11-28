@@ -1,0 +1,12 @@
+<h1>Search for stocks by symbol</h1>
+<div>
+<%= form_for :stock, url: user_stocks_path do |f| %>
+<p>
+  <%= f.label      :symbol %>
+  <%= f.text_field :symbol %>
+</p>
+<p>
+  <%= f.submit "Get quote" %>
+</p>
+<% end %>
+</div>

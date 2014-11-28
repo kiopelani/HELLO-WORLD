@@ -1,0 +1,22 @@
+<div ng-app="StockApp">
+  <table ng-controller="stockAppController">
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Market Cap</th>
+        <th>Latest Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="stock in StockList">
+        <td>{{$index + 1}}</td>
+        <td><a href="/users/<%=@user.id%>/stocks/">{{stock.name}}</td>
+        <td>{{stock.symbol}}</td>
+        <td>${{stock.market_cap}}</td>
+        <td>{{stock.last_price | currency}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

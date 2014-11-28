@@ -1,0 +1,26 @@
+<div id="show-container">
+  <div id="username">
+    <p>User Name: <%= @user.name %></p>
+  </div>
+  <div id="stock-container">
+    <p>Symbol: <%= @stock.symbol %></p>
+    <p>Name: <%= @stock.name %></p>
+    <p>Market Cap: <%= @stock.market_cap %></p>
+    <p>Latest Price: <%= @stock.last_price %></p>
+    <p>Day's High: <%= @stock.days_high %></p>
+    <p>Day's Low: <%= @stock.days_low %></p>
+    <p>Volume: <%= @stock.volume %></p>
+  </div>
+  <div id="link-container">
+    <div id="update-quote"><p>
+      <%= form_for :stock, method: :patch, url: user_stock_path do |f| %>
+        <p><%= f.submit "Update quote" %></p>
+      <% end %>
+    </div></p>
+    <div id="update-quote"><p>
+      <%= form_for :stock, method: :delete, url: user_stock_path do |f| %>
+        <p><%= f.submit "Remove stock" %></p>
+      <% end %>
+    </div></p>
+  </div>
+</div>
