@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular
 //= require turbolinks
 //= require_tree .
+//= views
+//= models
+//= controller
+
+angular.module('StockApp', [
+  'StockApp.controllers'
+]);

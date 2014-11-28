@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bid_realtime: 1
+  days_high: 1
+
+two:
+  bid_realtime: 1
+  days_high: 1
