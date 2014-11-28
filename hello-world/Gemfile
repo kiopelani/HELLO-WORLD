@@ -30,6 +30,8 @@ gem 'spring',        group: :development
 
 gem 'pg'
 gem 'stock_quote'
+gem 'rspotify'
+
 
 
 gem 'dotenv-rails', :groups => [:development, :test]

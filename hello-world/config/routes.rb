@@ -6,22 +6,14 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'dashboard#index'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
   get 'dashboard' => 'dashboard#index'
 
   get 'dashboard/music' => 'music#index', as: 'music'
   get 'dashboard/news' => 'news#index'
   get 'dashboard/weather' => 'weather#index'
 
-  get 'dashboard/music/spotify_authenticate' => 'music#spotify_authenticate', as: 'spotify_authenticate'
-
-
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/edit' => 'stocks#edit'
-
-  get 'dashboard/news' => 'news#index'
-  get 'dashboard/weather' => 'weather#index'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
