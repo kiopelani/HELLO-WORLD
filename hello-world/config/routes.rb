@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'dashboard/music' => 'music#index', as: 'music'
   get 'dashboard/news' => 'news#index'
   get 'dashboard/weather' => 'weather#index'
-
+  get 'dashboard/alarm' => 'alarm#index'
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/edit' => 'stocks#edit'
 
