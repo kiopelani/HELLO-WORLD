@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'dashboard' => 'dashboard#index'
 
-
   get 'dashboard/music' => 'music#index'
   get 'dashboard/news' => 'news#index'
   get 'dashboard/weather' => 'weather#index'
