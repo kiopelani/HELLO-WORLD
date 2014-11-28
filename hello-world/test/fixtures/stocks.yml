@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  days_high: MyString
+  days_low: MyString
+  market_cap: MyString
+
+two:
+  days_high: MyString
+  days_low: MyString
+  market_cap: MyString
