@@ -1,9 +1,8 @@
 <h3>Stock Widget:</h3>
-<div ng-app="StockApp">
-  <table ng-controller="stockAppCtrl">
+<div class="container">
+  <table>
     <thead>
       <tr>
-        <th>Symbol</th>
         <th>Name</th>
         <th>Day High</th>
         <th>Day Low</th>
@@ -13,15 +12,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="stock in StockList">
-        <td>{{stock.symbol}}</td>
-        <td>{{stock.name}}</td>
-        <td>{{stock.days_high | currency}}</td>
-        <td>{{stock.days_low | currency}}</td>
-        <td>{{stock.last_trade_price_only | currency}}</td>
-        <td>${{stock.market_capitalization}}</td>
-        <td>{{stock.volume | number}}</td>
-      </tr>
+      <% @stocks.each do |stock| %>
+        <tr>
+          <td><%= stock.name %></td>
+          <td>$<%= stock.days_high %></td>
+          <td>$<%= stock.days_low %></td>
+          <td>$<%= stock.last_trade_price_only %></td>
+          <td>$<%= stock.market_capitalization %></td>
+          <td><%= stock.volume %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>

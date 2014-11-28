@@ -12,7 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular
 //= require turbolinks
 //= require_tree .
 //= require ../../../vendor/assets/bootstrap-3/js/bootstrap.min.js
+//= require stocks/stocks
 
+angular.module('StockApp', [
+  'StockApp.controllers'
+]);

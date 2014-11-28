@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/edit' => 'stocks#edit'
+  get 'dashboard/stocks/endpoint' => 'stocks#endpoint'
 
   get 'dashboard/news' => 'news#index'
   get 'dashboard/weather' => 'weather#index'
