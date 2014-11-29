@@ -3,17 +3,46 @@ $(document).ready(function() {
       e.preventDefault();
 
       // convertAlarmDate($('#alarm-date').val());
+      convertAlarmDateTime($('#alarm-input').val());
       // convertAlarmTime($('#alarm-time').val());
 
       // convertAlarmTime($('#alarm-input').val());
     });
 });
 
+  function currentDate(){
+    var now = moment();
+    console.log(now);
+    return now;
+  }
 
-  // function convertAlarmDate(date){
-  //   console.log('in converted alarm date')
-  //   console.log(date)
-  // };
+  function convertAlarmDateTime(dateTime){
+    console.log('in converted alarm date')
+    console.log(dateTime)
+    var alarm = moment(dateTime)
+    console.log(alarm)
+    timeDifference(alarm)
+  };
+
+  function timeDifference(alarm){
+    var current = currentDate();
+    console.log('difference')
+    var difference = alarm.diff(current)
+    console.log(difference)
+    setAlarm(difference);
+  };
+
+
+  function setAlarm(milliseconds) {
+    console.log('in set alarm')
+    setTimeout(timesUp, milliseconds);
+  };
+
+  function timesUp(){
+    alert('times up!')
+  };
+
+
 
   // function convertAlarmTime(time){
   //   console.log('in converted alarm time')
@@ -26,10 +55,6 @@ $(document).ready(function() {
   //   console.log(today)
   // }
 
-  function currentDate(){
-    var now = moment();
-    console.log(now)
-  }
 
 
   // function currentTime(){
