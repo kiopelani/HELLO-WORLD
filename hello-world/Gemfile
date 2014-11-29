@@ -30,6 +30,8 @@ gem 'spring',        group: :development
 
 gem 'pg'
 gem 'stock_quote'
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+
 gem 'rspotify'
 
 gem 'dotenv-rails', :groups => [:development, :test]
