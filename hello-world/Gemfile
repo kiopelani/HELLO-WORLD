@@ -30,7 +30,6 @@ gem 'spring',        group: :development
 
 gem 'pg'
 gem 'stock_quote'
-gem 'angularjs-rails'
 gem 'rspotify'
 
 
