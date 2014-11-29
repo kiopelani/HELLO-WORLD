@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/edit' => 'stocks#edit'
+  get 'dashboard/stocks/endpoint' => 'stocks#endpoint'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
