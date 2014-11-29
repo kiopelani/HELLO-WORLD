@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require_tree .
 //= require ../../../vendor/assets/bootstrap-3/js/bootstrap.min.js
+//= require ../../../vendor/assets/javascripts/moment.min.js
