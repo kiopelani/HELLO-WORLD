@@ -34,8 +34,6 @@ gem 'rspotify'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
-gem 'nokogiri'
-
 gem 'httparty'
 
 # Use ActiveModel has_secure_password

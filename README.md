@@ -35,3 +35,4 @@
 ##Technologies Used:
 - Rails.
 - Bootstrap.
+- Moment.js.
