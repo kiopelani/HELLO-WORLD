@@ -2,35 +2,41 @@ $(document).ready(function() {
     $('#alarm-button').click(function(e) {
       e.preventDefault();
 
-      convertAlarmDate($('#alarm-date').val());
-      convertAlarmTime($('#alarm-time').val());
+      // convertAlarmDate($('#alarm-date').val());
+      // convertAlarmTime($('#alarm-time').val());
 
       // convertAlarmTime($('#alarm-input').val());
     });
 });
 
 
-  function convertAlarmDate(date){
-    console.log('in converted alarm date')
-    console.log(date)
-  };
+  // function convertAlarmDate(date){
+  //   console.log('in converted alarm date')
+  //   console.log(date)
+  // };
 
-  function convertAlarmTime(time){
-    console.log('in converted alarm time')
-    console.log(time)
-  };
+  // function convertAlarmTime(time){
+  //   console.log('in converted alarm time')
+  //   console.log(time)
+  // };
+
+  // function currentDate(){
+  //   console.log('in current date')
+  //   var today = new Date().toLocaleString()
+  //   console.log(today)
+  // }
 
   function currentDate(){
-    console.log('in current date')
-    var today = new Date().toLocaleString()
-    console.log(today)
+    var now = moment();
+    console.log(now)
   }
 
-  function currentTime(){
-    console.log('in current time')
-    var rightNow = (new Date()).getTime()
-    console.log(rightNow)
-  }
+
+  // function currentTime(){
+  //   console.log('in current time')
+  //   var rightNow = (new Date()).getTime()
+  //   console.log(rightNow)
+  // }
 
 
 
