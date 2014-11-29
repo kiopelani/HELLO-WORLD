@@ -68,7 +68,20 @@
             '</p></li>';
 
         scroller.append(markup);
+        // $('body').css('background-image', ('url("../assets/background-images/' +icon+'.jpg")'));
+        $('body').css({
+            'backgroundImage': 'url("../assets/background-images/' + icon +'.jpg")',
+            'backgroundRepeat': 'no-repeat',
+            'backgroundPosition': 'top center'
+        });
     }
+
+
+    // $('body').css({
+    //         'backgroundImage': 'url("../assets/background-images/' + icon +'.jpg")',
+    //         'backgroundRepeat': 'no-repeat',
+    //         'backgroundPosition': 'top center'
+    //     });
 
     /* Error handling functions */
 
