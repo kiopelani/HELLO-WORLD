@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   get 'dashboard/alarm' => 'alarm#index'
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/edit' => 'stocks#edit'
+  get 'dashboard/stocks/endpoint' => 'stocks#endpoint'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
