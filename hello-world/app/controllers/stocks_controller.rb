@@ -24,11 +24,11 @@ class StocksController < ApplicationController
     update_stocks
     render action: "index"
   end
-  # def endpoint
-  #   @stocks = []
-  #   update_stocks
-  #   render json: @stocks
-  # end
+  def endpoint
+    @stocks = []
+    update_stocks
+    render json: @stocks
+  end
   private
     def setup
       @stock_symbols = ["aapl", "goog", "fb", "crm", "atvi"]
