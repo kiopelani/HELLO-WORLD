@@ -1,0 +1,61 @@
+<% if @user.widgets.length == 0 %>
+    <h3>You have no widgets!</h3>
+    <button><%= link_to 'Add widgets', add_widgets_path %> </button>
+<% else %>
+    <h3> You have <%=@user.widgets.length %> widgets. </h3>
+    <% @user.widgets.each do |widget| %>
+        <%= widget.name %>
+    <% end %>
+
+<% end %>
+
+<div class="gridster">
+    <ul>
+        <!-- column 1 -->
+        <li class="yellow" data-col="1" data-row="1" data-sizex="2" data-sizey="2">
+            <%= render 'widgets/weather' %>
+        </li>
+
+        <li class="black" data-col="1" data-row="1" data-sizex="3" data-sizey="1">
+            <%= render 'widgets/alarm' %>
+        </li>
+
+
+<!--         <li class="gray" data-col="3" data-row="3" data-sizex="3" data-sizey="3">
+
+        </li> -->
+
+        <!-- column 2 -->
+        <li class="blue" data-col="3" data-row="2" data-sizex="3" data-sizey="1">
+            <%= render 'widgets/music' %>
+        </li>
+
+
+        <li class="green" data-col="1" data-row="6" data-sizex="4" data-sizey="3">
+            <%= render 'widgets/stock' %>
+
+        </li>
+
+
+        <li class="yellow" data-col="6" data-row="1" data-sizex="3" data-sizey="5" id="news-thing">
+            <%= render 'widgets/newsitem' %>
+        </li>
+
+        <li class="purple" data-col="1" data-row="4" data-sizex="5" data-sizey="3">
+            <%= render 'widgets/sports' %>
+        </li>
+
+
+    </ul>
+</div>
+
+
+
+
+
+<script>
+    $('.gridster ul').gridster({
+        widget_margins: [10,10], //10px margins
+        widget_base_dimensions: [100,100] //100px width/height
+    })
+</script>
