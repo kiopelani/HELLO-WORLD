@@ -83,8 +83,9 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-
-    <%= yield %>
+    <div ng-app="myApp">
+      <%= yield %>
+    </div>git
   </div>
 <center>
  <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>

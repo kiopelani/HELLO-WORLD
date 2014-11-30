@@ -9,7 +9,6 @@ angular.module('SportApp.controllers', [])
     $scope.SportList = (data);
   })
   .error( function(error) {
-    debugger
     console.log(error);
   })
 });
