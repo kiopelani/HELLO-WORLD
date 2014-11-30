@@ -2,14 +2,18 @@
 <div class="gridster">
     <ul>
         <!-- column 1 -->
-        <li class="yellow" data-col="1" data-row="1" data-sizex="1" data-sizey="1"></li>
-        <li class="black" data-col="1" data-row="2" data-sizex="1" data-sizey="1"></li>
-        <li class="gray" data-col="1" data-row="3" data-sizex="1" data-sizey="1"></li>
+        <li class="yellow" data-col="1" data-row="1" data-sizex="2" data-sizey="2">
+        <%= render 'widgets/weather' %></li>
+
+        <li class="black" data-col="1" data-row="1" data-sizex="3" data-sizey="1"><%= render 'widgets/alarm' %></li>
+
+
+        <li class="gray" data-col="2" data-row="3" data-sizex="1" data-sizey="1"></li>
 
         <!-- column 2 -->
-        <li class="blue" data-col="2" data-row="1" data-sizex="1" data-sizey="1"></li>
-        <li class="green" data-col="2" data-row="2" data-sizex="1" data-sizey="1"></li>
-        <li class="purple" data-col="2" data-row="3" data-sizex="1" data-sizey="1"></li>
+        <li class="blue" data-col="1" data-row="3" data-sizex="1" data-sizey="1"></li>
+        <li class="green" data-col="3" data-row="3" data-sizex="1" data-sizey="1"></li>
+        <li class="purple" data-col="4" data-row="3" data-sizex="1" data-sizey="1"></li>
 
     </ul>
 </div>
@@ -20,5 +24,4 @@
         widget_margins: [10,10], //10px margins
         widget_base_dimensions: [100,100] //100px width/height
     })
-
 </script>
