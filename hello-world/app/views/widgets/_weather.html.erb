@@ -46,7 +46,6 @@
 
             var city = response.name
             var icon = response.weather[0].icon
-                // var mainCondition = response.weather[0].main
             var condition = response.weather[0].description
             var currentTemperature = convertTemperature(response.main.temp) + '°' + DEG
             var tempMinMax = convertTemperature(response.main.temp_min) + '°' + DEG + ' / ' + convertTemperature(response.main.temp_max) + '°' + DEG + '</b>'
@@ -75,13 +74,6 @@
             'backgroundPosition': 'top center'
         });
     }
-
-
-    // $('body').css({
-    //         'backgroundImage': 'url("../assets/background-images/' + icon +'.jpg")',
-    //         'backgroundRepeat': 'no-repeat',
-    //         'backgroundPosition': 'top center'
-    //     });
 
     /* Error handling functions */
 
