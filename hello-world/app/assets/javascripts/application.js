@@ -22,3 +22,7 @@
 angular.module('StockApp', [
   'StockApp.controllers'
 ]);
+
+angular.module('AlarmApp', [
+  'AlarmApp.controllers'
+]);
