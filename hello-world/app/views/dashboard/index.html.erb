@@ -1,14 +1,30 @@
-<h1>Hello, world!</h1>
-
-<% if user_signed_in? %>
-  <p>Logged in as <%= current_user.email %></p>
+<% if @user.widgets.nil? %>
+    <h3>You have no widgets!</h3>
+<% else %>
+    <h3> You have <%=@user.widgets.length %> widgets. </h3>
+    <% @user.widgets.each do |widget| %>
+        <%= widget.name %>
+    <% end %>
 <% end %>
 
+<div class="gridster">
+    <ul>
+        <!-- column 1 -->
+        <li class="yellow" data-col="1" data-row="1" data-sizex="1" data-sizey="1"></li>
+        <li class="black" data-col="1" data-row="2" data-sizex="1" data-sizey="1"></li>
+        <li class="gray" data-col="1" data-row="3" data-sizex="1" data-sizey="1"></li>
 
-<%= render 'widgets/stock' %>
+        <!-- column 2 -->
+        <li class="blue" data-col="2" data-row="1" data-sizex="1" data-sizey="1"></li>
+        <li class="green" data-col="2" data-row="2" data-sizex="1" data-sizey="1"></li>
+        <li class="purple" data-col="2" data-row="3" data-sizex="1" data-sizey="1"></li>
+    </ul>
+</div>
 
-<br>
-<%= render 'widgets/alarm' %>
-<%= render 'widgets/newsitem' %>
-<%= render 'widgets/weather' %>
-<%= render 'widgets/music' %>
+
+<script>
+    $('.gridster ul').gridster({
+        widget_margins: [10,10], //10px margins
+        widget_base_dimensions: [100,100] //100px width/height
+    })
+</script>

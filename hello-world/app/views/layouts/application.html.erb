@@ -8,14 +8,14 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag "react" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="wrapper">
 
   <!-- ##### HEADER ##### -->
 
-  <div class = "navbar navbar-inverse navbar-static-top">
+<!--   <div class = "navbar navbar-inverse navbar-static-top">
     <div class = "container">
       <div class="navbar-header"><a href="/" class="navbar-brand">Hello, World!</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -50,8 +50,22 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
+  <!-- ##### NEW HEADER ##### -->
+<% if user_signed_in? %>
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+              <a href="/dashboard">
+                  Hello, World!
+              </a>
+          </li>
+          <li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
+          <li><%= link_to 'Add widgets', add_widgets_path %> </li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      </ul>
+  </div>
   <!-- ##### BODY ##### -->
 
   <div class = "container">
@@ -62,13 +76,22 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-    <script type="text/jsx">
-      <div id="content">WORK HERE</div>
-      // Your code here
-    </script>
-
     <%= yield %>
   </div>
+<center>
+ <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+</center>
+<!-- ##### TOGGLE MENU ###### -->
+
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+<% end %>
+
+
 
   <!-- ###### FOOTER ###### -->
 
@@ -79,24 +102,7 @@
     </div>
   </div>
 
-  <!-- ###### MODAL ###### -->
 
-  <div class = "modal fade" id = "contact" role = "dialog">
-    <div class = "modal-dialog">
-      <div class = "modal-content">
-        <div clas = "modal-header">
-          <h4> Contact Us</h4>
-        </div>
-        <div class = "modal-body">
-          <p>Haha, you're on your own!</p>
-        </div>
-        <div class = "modal-footer">
-          <a class = "btn btn-default" data-dismiss="modal">Close</a>
-          <a class = "btn btn-primary" data-dismiss="modal">Close</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+</div>
 </body>
 </html>

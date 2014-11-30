@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Weather Forecast App Revisited | Tutorialzine Demo</title>
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playball|Open+Sans+Condensed:300,700" />
 
-    </head>
-    <body>
-        <header>
-        </header>
-        <div id="weather">
-            <ul id="scroller">
-                <!-- The forecast items will go here -->
-            </ul>
-        </div>
-    <script>
+<div id="weather">
+    <ul id="scroller">
+        <!-- The forecast items will go here -->
+    </ul>
+</div>
+<script>
     $(function() {
     /* Configuration */
     var DEG = 'f'; // c for celsius, f for fahrenheit
@@ -103,8 +92,4 @@
         weatherDiv.addClass('error').html(msg);
     }
 });
-        </script>
-
-
-    </body>
-</html>
+</script>
