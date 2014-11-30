@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'dashboard/sports/endpoint' => 'sports#endpoint'
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
 
+
   resources :widgets
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
