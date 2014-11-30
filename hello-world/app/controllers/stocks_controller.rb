@@ -2,10 +2,9 @@ require 'stock_quote'
 require 'pp'
 
 class StocksController < ApplicationController
-  before_action :setup
+  before_action :load_user
 
   def index
-    @stocks = []
     update_stocks
   end
   def update_stocks
@@ -14,7 +13,6 @@ class StocksController < ApplicationController
     end
   end
   def edit
-    @stocks = []
     if params[:commit].strip == "Add stock"
       @stock_symbols << params[:stock][:symbol]
     end
@@ -22,15 +20,19 @@ class StocksController < ApplicationController
       @stock_symbols.delete(params[:stock][:symbol])
     end
     update_stocks
-    render action: "index"
   end
   def endpoint
-    @stocks = []
     update_stocks
     render json: @stocks
   end
   private
-    def setup
-      @stock_symbols = ["aapl", "goog", "fb", "crm", "atvi"]
+    def load_user
+      @user = current_user
+      @stocks = []
+      @stock_symbols = []
+      @user.stocks.each do |stock|
+        @stock_symbols << stock.symbol
+      end
     end
 end
+

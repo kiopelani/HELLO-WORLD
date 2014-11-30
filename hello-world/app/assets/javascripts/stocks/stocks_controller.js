@@ -1,12 +1,13 @@
+
 angular.module('StockApp.controllers', [])
 .controller('stockAppCtrl', function($scope, $http, $location) {
-  // var url = ($location.$$absUrl+"toJS").replace("http://localhost:300","")
-  url = "dashboard/stocks/endpoint"
-  $http.get(url)
-  .success( function(data) {
+  url = "/dashboard/stocks/endpoint"
+  console.log(url)
+  $http.get(url).success( function(data) {
+    // debugger
     $scope.StockList = (data);
-  })
-  .error( function(error) {
-    console.log(error);
-  })
+  });
+  $scope.add = function(data) {
+    $scope.StockList.push()
+  }
 });
