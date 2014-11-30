@@ -1,0 +1,22 @@
+<div class="gridster">
+    <ul>
+        <!-- column 1 -->
+        <li class="yellow" data-col="1" data-row="1" data-sizex="1" data-sizey="1"></li>
+        <li class="black" data-col="1" data-row="2" data-sizex="1" data-sizey="1"></li>
+        <li class="gray" data-col="1" data-row="3" data-sizex="1" data-sizey="1"></li>
+
+        <!-- column 2 -->
+        <li class="blue" data-col="2" data-row="1" data-sizex="1" data-sizey="1"></li>
+        <li class="green" data-col="2" data-row="2" data-sizex="1" data-sizey="1"></li>
+        <li class="purple" data-col="2" data-row="3" data-sizex="1" data-sizey="1"></li>
+
+    </ul>
+</div>
+
+
+<script>
+    $('.gridster ul').gridster({
+        widget_margins: [10,10], //10px margins
+        widget_base_dimensions: [100,100] //100px width/height
+    })
+</script>

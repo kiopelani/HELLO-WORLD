@@ -137,3 +137,30 @@ body {
 }
 
 
+.gridster li{
+    list-style: none;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.black{
+    background-color: black;
+}
+
+.gray{
+    background-color: #ccc;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.purple{
+    background-color: purple;
+}
