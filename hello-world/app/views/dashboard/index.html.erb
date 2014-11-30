@@ -1,26 +1,24 @@
-<h1>Hello, world!</h1>
+<div class = "row">
+        <div id="widget-box" class = "col-md-2">
+           <%= render 'widgets/weather' %>
+        </div>
 
-<% if user_signed_in? %>
-  <p>Logged in as <%= current_user.email %></p>
-<% end %>
+        <div id="widget-box" class = "col-md-3">
+          <%= render 'widgets/alarm' %>
+        </div>
+
+        <div id="widget-box" class = "col-md-5">
+          <%= render 'widgets/news' %>
+        </div>
+
+      </div>
+    </div>
+
 
 <div class = "row">
-  <div id="widget-box" class = "col-sm-3">
-    <center>
-    <%= render 'widgets/weather' %>
-  </center>
+
+  <div id="widget-box" class = "col-sm-6">
+    <%= render 'widgets/stock' %>
   </div>
 
-</div>
-
-<div id="widget-box">
-  <%= render 'widgets/alarm' %>
-</div>
-
-<div id="widget-box">
-  <%= render 'widgets/stock' %>
-</div>
-
-<div id="widget-box">
-  <%= render 'widgets/news' %>
 </div>
