@@ -23,8 +23,13 @@ $(document).ready(function() {
 
   function setAlarm(milliseconds) {
     setTimeout(timesUp, milliseconds);
+    alert('alarm set')
   };
 
   function timesUp(){
-    alert('times up!')
+    $('#alarm-div').addClass("pulse");
+    // $('#alarm-div').style(visibility:"block");
+
+    alert('times up!');
+
   };
