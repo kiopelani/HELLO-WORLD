@@ -1,3 +1,4 @@
+
 angular.module('SportApp.controllers', [])
 .controller('sportAppCtrl', function($scope, $http, $location) {
   // var url = ($location.$$absUrl+"toJS").replace("http://localhost:300","")
