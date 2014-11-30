@@ -1,23 +1,25 @@
-  <style type='text/css'>
-/*    #results{ width: 100%; padding: 5px; height: 400px; margin: auto; overflow: auto; }*/
+<style type='text/css'>
+  #results{ width: 100%; padding: 5px; height: 100%; overflow: auto; }
+</style>
 
   <script type='text/javascript'>
     function top_stories(o){
       var items = o.query.results.item;
       var output = '';
       var no_items=items.length;
-      for(var i=0;i<no_items;i++){
+      for(var i=0;i<4;i++){
         var title = items[i].title;
         var link = items[i].link;
         var desc = items[i].description;
         output += "<h3><a href='" + link + "'>"+title+"</a></h3>" + desc + "<hr/>";
       }
       // Place news stories in div tag
-      document.getElementById('news-thing').innerHTML = output;
+      document.getElementById('results').innerHTML = output;
     }
   </script>
-
-
+  </head>
+  <body>
     <!-- Div tag for stories results -->
+    <div id='results'></div>
     <!-- The YQL statment will be assigned to src. -->
     <script src='https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&diagnostics=true&callback=top_stories'></script>

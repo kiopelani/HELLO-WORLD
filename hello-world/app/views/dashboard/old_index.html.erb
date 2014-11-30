@@ -3,11 +3,10 @@
     <button><%= link_to 'Add widgets', add_widgets_path %> </button>
 <% else %>
     <h3> You have <%=@user.widgets.length %> widgets. </h3>
-    <div class="gridster">
-    <ul>
     <% @user.widgets.each do |widget| %>
-        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3">  <%= render "widgets/#{widget.name}" %></li>
+        <%= widget.name %>
     <% end %>
+
 <% end %>
 
 <div class="gridster">
@@ -27,8 +26,19 @@
         </li> -->
 
         <!-- column 2 -->
-        <li class="green" data-col="2" data-row="6" data-sizex="4" data-sizey="3">
+        <li class="blue" data-col="3" data-row="2" data-sizex="3" data-sizey="1">
+            <%= render 'widgets/music' %>
+        </li>
+
+
+        <li class="green" data-col="1" data-row="6" data-sizex="4" data-sizey="3">
             <%= render 'widgets/stock' %>
+
+        </li>
+
+
+        <li class="yellow" data-col="6" data-row="1" data-sizex="3" data-sizey="5" id="news-thing">
+            <%= render 'widgets/newsitem' %>
         </li>
 
         <li class="purple" data-col="1" data-row="4" data-sizex="5" data-sizey="3">
@@ -36,18 +46,11 @@
         </li>
 
 
-
-
-
-
-        <li class="yellow" data-col="1" data-row="6" data-sizex="1" data-sizey="1" id="news-thing">
-
-        </li>
-
-
-<% end %>
     </ul>
 </div>
+
+
+
 
 
 <script>
