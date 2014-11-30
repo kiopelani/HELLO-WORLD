@@ -14,10 +14,14 @@
 //= require jquery_ujs
 //= require angular
 //= require turbolinks
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
 //= require ../../../vendor/assets/bootstrap-3/js/bootstrap.min.js
 //= require ../../../vendor/assets/javascripts/moment.min.js
 // = require stocks/stocks_controller
+// = require sports/sports_controller
 
 angular.module('StockApp', [
   'StockApp.controllers'
@@ -25,4 +29,8 @@ angular.module('StockApp', [
 
 angular.module('AlarmApp', [
   'AlarmApp.controllers'
+]);
+
+angular.module('SportApp', [
+  'SportApp.controllers'
 ]);
