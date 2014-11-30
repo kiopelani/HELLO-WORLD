@@ -8,14 +8,14 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag "react" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="wrapper">
 
   <!-- ##### HEADER ##### -->
 
-  <div class = "navbar navbar-inverse navbar-static-top">
+<!--   <div class = "navbar navbar-inverse navbar-static-top">
     <div class = "container">
       <div class="navbar-header"><a href="/" class="navbar-brand">Hello, World!</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -50,6 +50,39 @@
       </div>
 
     </div>
+  </div> -->
+
+  <!-- ##### NEW HEADER ##### -->
+
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+              <a href="#">
+                  Hello, World!
+              </a>
+          </li>
+          <li>
+              <a href="#">Dashboard</a>
+          </li>
+          <li>
+              <a href="#">Shortcuts</a>
+          </li>
+          <li>
+              <a href="#">Overview</a>
+          </li>
+          <li>
+              <a href="#">Events</a>
+          </li>
+          <li>
+              <a href="#">About</a>
+          </li>
+          <li>
+              <a href="#">Services</a>
+          </li>
+          <li>
+              <a href="#">Contact</a>
+          </li>
+      </ul>
   </div>
 
   <!-- ##### BODY ##### -->
@@ -62,13 +95,21 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-    <script type="text/jsx">
-      <div id="content">WORK HERE</div>
-      // Your code here
-    </script>
-
     <%= yield %>
   </div>
+<center>
+ <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+</center>
+<!-- ##### TOGGLE MENU ###### -->
+
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+
+
 
   <!-- ###### FOOTER ###### -->
 
@@ -98,5 +139,6 @@
     </div>
   </div>
 
+</div>
 </body>
 </html>
