@@ -1,0 +1,29 @@
+<h3>Sport Widget:</h3>
+<div ng-app="SportApp">
+  <table ng-controller="sportAppCtrl">
+    <thead>
+      <tr>
+        <th>pic</th>
+        <th>Home Team</th>
+        <th>Score</th>
+        <th>Score</th>
+        <th>Away Team</th>
+        <th>pic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="sport in SportList">
+        <td>
+          <img ng-src="{{sport.home_gif}}" />
+        </td>
+        <td>{{sport.home_team}}</td>
+        <td>{{sport.home_score}}</td>
+        <td>{{sport.away_score}}</td>
+        <td>{{sport.away_team}}</td>
+        <td>
+          <img ng-src="{{sport.away_gif}}" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
