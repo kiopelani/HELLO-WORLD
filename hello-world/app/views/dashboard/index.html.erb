@@ -6,48 +6,9 @@
     <div class="gridster">
     <ul>
     <% @user.widgets.each do |widget| %>
-        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3">  <%= render "widgets/#{widget.name}" %></li>
+        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3"><button><%= link_to 'X', "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %> </button>  <%= render "widgets/#{widget.name}" %></li>
     <% end %>
 <% end %>
-
-<div class="gridster">
-    <ul>
-        <!-- column 1 -->
-        <li class="yellow" data-col="1" data-row="1" data-sizex="2" data-sizey="2">
-            <%= render 'widgets/weather' %>
-        </li>
-
-        <li class="black" data-col="1" data-row="1" data-sizex="3" data-sizey="1">
-            <%= render 'widgets/alarm' %>
-        </li>
-
-
-<!--         <li class="gray" data-col="3" data-row="3" data-sizex="3" data-sizey="3">
-
-        </li> -->
-
-        <!-- column 2 -->
-        <li class="green" data-col="2" data-row="6" data-sizex="4" data-sizey="3">
-            <%= render 'widgets/stock' %>
-        </li>
-
-        <li class="purple" data-col="1" data-row="4" data-sizex="5" data-sizey="3">
-            <%= render 'widgets/sports' %>
-        </li>
-
-
-
-
-
-
-        <li class="yellow" data-col="1" data-row="6" data-sizex="1" data-sizey="1" id="news-thing">
-
-        </li>
-
-
-<% end %>
-    </ul>
-</div>
 
 
 <script>
