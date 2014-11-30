@@ -1,18 +1,16 @@
 <h3>Add widgets!</h3>
 
 <%= form_for(@widget) do |f| %>
+  <%= f.label :widgets, 'Weather' %>
+  <%= f.radio_button :name, 'weather' %><br>
+  <%= f.label :widgets, 'News' %>
+  <%= f.radio_button :name, 'newsitem' %><br>
   <%= f.label :widgets, 'Stocks' %>
-  <%= f.radio_button :name, 'stocks' %>
+  <%= f.radio_button :name, 'stocks' %><br>
+  <%= f.label :widgets, 'Spotify' %>
+  <%= f.radio_button :name, 'spotify_preferences' %><br>
+  <%= f.label :widgets, 'Alarm' %>
+  <%= f.radio_button :name, 'alarm' %><br>
 
   <p><%= f.submit "Add" %></p>
 <% end %>
-
-<!--
-  <ul>
-    <li>Stocks</li>
-    <li>Weather</li>
-    <li>Spotify</li>
-    <li>News</li>
-    <li>Alarm</li>
-  </ul> -->
-

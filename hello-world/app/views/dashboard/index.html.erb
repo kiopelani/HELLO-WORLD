@@ -1,15 +1,13 @@
-<% if @user.widgets.nil? %>
+<% if @user.widgets.length == 0 %>
     <h3>You have no widgets!</h3>
-    <li><%= link_to 'Add widgets', add_widgets_path %> </li>
+    <button><%= link_to 'Add widgets', add_widgets_path %> </button>
 <% else %>
     <h3> You have <%=@user.widgets.length %> widgets. </h3>
     <% @user.widgets.each do |widget| %>
         <%= widget.name %>
     <% end %>
+
 <% end %>
-
-
-
 
 <div class="gridster">
     <ul>
