@@ -6,7 +6,7 @@
     <div class="gridster">
     <ul>
     <% @user.widgets.each do |widget| %>
-        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3">  <%= render "widgets/#{widget.name}" %></li>
+        <li class="gs-w" id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3">  <%= render "widgets/#{widget.name}" %><span class="gs-resize-handle gs-resize-handle-both"></span></li>
     <% end %>
 
 <% end %>
@@ -19,4 +19,8 @@
         widget_margins: [10,10], //10px margins
         widget_base_dimensions: [100,100] //100px width/height
     })
+
+    var theGrid = $('.gridster ul').gridster
+    theGrid.resize_widget_dimensions({widget_base_dimensions: [100,  100]});
+
 </script>
