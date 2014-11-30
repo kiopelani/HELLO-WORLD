@@ -1,5 +1,6 @@
 <% if @user.widgets.nil? %>
     <h3>You have no widgets!</h3>
+    <li><%= link_to 'Add widgets', add_widgets_path %> </li>
 <% else %>
     <h3> You have <%=@user.widgets.length %> widgets. </h3>
     <% @user.widgets.each do |widget| %>
