@@ -9,7 +9,7 @@ class WidgetsController < ApplicationController
     @user = current_user
     @widget = @user.widgets.new(widget_params)
     if @widget.save
-      @message = params
+      redirect_to dashboard_path
     else
       @message = params
     end
