@@ -1,0 +1,41 @@
+<h3>Stock Widget:</h3>
+<div ng-app="StockApp">
+  <table ng-controller="stockAppCtrl">
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Day High</th>
+        <th>Day Low</th>
+        <th>Last Price</th>
+        <th>Market Cap</th>
+        <th>Volume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="stock in StockList">
+        <td>{{stock.symbol}}</td>
+        <td>{{stock.name}}</td>
+        <td>{{stock.days_high | currency}}</td>
+        <td>{{stock.days_low | currency}}</td>
+        <td>{{stock.last_trade_price_only | currency}}</td>
+        <td>${{stock.market_capitalization}}</td>
+        <td>{{stock.volume | number}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<h4>Add or remove a stock by entering the symbol:</h4>
+<div class="search">
+  <%= form_for :stock, url: dashboard_stocks_edit_path do |f| %>
+  <p>
+    <%= f.label      :symbol %>
+    <%= f.text_field :symbol %>
+  </p>
+  <p>
+    <%= f.submit "   Add stock   " %>
+    <%= f.submit "Remove stock" %>
+  </p>
+  <% end %>
+</div>

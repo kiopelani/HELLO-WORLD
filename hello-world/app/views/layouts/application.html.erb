@@ -1,14 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>HelloWorld</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="wrapper">
 
-<%= yield %>
+  <!-- ##### HEADER ##### -->
 
+<!--   <div class = "navbar navbar-inverse navbar-static-top">
+    <div class = "container">
+      <div class="navbar-header"><a href="/" class="navbar-brand">Hello, World!</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      </div>
+
+      <div class = "collapse navbar-collapse navHeaderCollapse">
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+          <% else %>
+            <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+            <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+          <% end %>
+
+         <li class = "dropdown">
+            <a href="#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class ="caret"></b></a>
+              <ul class = "dropdown-menu">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Google+</a></li>
+                <li><a href="#">Instagram</a></li>
+              </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#contact" data-toggle="modal">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div> -->
+
+  <!-- ##### NEW HEADER ##### -->
+
+  <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+              <a href="#">
+                  Hello, World!
+              </a>
+          </li>
+          <li>
+              <a href="#">Dashboard</a>
+          </li>
+          <li>
+              <a href="#">Shortcuts</a>
+          </li>
+          <li>
+              <a href="#">Overview</a>
+          </li>
+          <li>
+              <a href="#">Events</a>
+          </li>
+          <li>
+              <a href="#">About</a>
+          </li>
+          <li>
+              <a href="#">Services</a>
+          </li>
+          <li>
+              <a href="#">Contact</a>
+          </li>
+      </ul>
+  </div>
+
+  <!-- ##### BODY ##### -->
+
+  <div class = "container">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+    <%= yield %>
+  </div>
+<center>
+ <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+</center>
+<!-- ##### TOGGLE MENU ###### -->
+
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
+
+
+
+  <!-- ###### FOOTER ###### -->
+
+  <div class = "navbar navbar-default navbar-fixed-bottom">
+    <div class = "container">
+      <p class = "navbar-text pull-left">Site Built By Kiope Gyzen, Youngsun Paik, Henry Tam, and Wesley Gauntt</p>
+      <a class = "navbar-btn btn-danger btn pull-right">We're great! </a>
+    </div>
+  </div>
+
+  <!-- ###### MODAL ###### -->
+
+  <div class = "modal fade" id = "contact" role = "dialog">
+    <div class = "modal-dialog">
+      <div class = "modal-content">
+        <div clas = "modal-header">
+          <h4> Contact Us</h4>
+        </div>
+        <div class = "modal-body">
+          <p>Haha, you're on your own!</p>
+        </div>
+        <div class = "modal-footer">
+          <a class = "btn btn-default" data-dismiss="modal">Close</a>
+          <a class = "btn btn-primary" data-dismiss="modal">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>

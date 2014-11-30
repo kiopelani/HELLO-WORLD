@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Weather Forecast App Revisited | Tutorialzine Demo</title>
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playball|Open+Sans+Condensed:300,700" />
+
+    </head>
+    <body>
+        <header>
+        </header>
+        <div id="weather">
+            <ul id="scroller">
+                <!-- The forecast items will go here -->
+            </ul>
+        </div>
+    <script>
+    $(function() {
+    /* Configuration */
+    var DEG = 'f'; // c for celsius, f for fahrenheit
+
+    var weatherDiv = $('#weather'),
+        scroller = $('#scroller'),
+        location = $('p.location');
+
+    // Does this browser support geolocation?
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(locationSuccess, locationError);
+    } else {
+        showError("Your browser does not support Geolocation!");
+    }
+
+    // Get user's location, and use OpenWeatherMap
+    // to get the location name and weather forecast
+
+    function locationSuccess(position) {
+
+        var weatherAPI = 'http://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude +
+            '&lon=' + position.coords.longitude
+
+        $.getJSON(weatherAPI, function(response) {
+            JSON.stringify({
+                data: response
+            });
+
+            var city = response.name
+            var icon = response.weather[0].icon
+            var condition = response.weather[0].description
+            var currentTemperature = convertTemperature(response.main.temp) + '°' + DEG
+            var tempMinMax = convertTemperature(response.main.temp_min) + '°' + DEG + ' / ' + convertTemperature(response.main.temp_max) + '°' + DEG + '</b>'
+
+            addWeather(
+                icon,
+                city + '<br>' +currentTemperature + '<br>' + tempMinMax,
+                condition
+            );
+            // location.html(city);
+        });
+    }
+
+    function addWeather(icon, temperatureInfo, condition) {
+
+        var markup = '<li>' +
+            '<img src="../assets/icons/' + icon + '.png" />' +
+            ' <p class="temperatureInfo">' + temperatureInfo + '</p> <p class="cond">' + condition +
+            '</p></li>';
+
+        scroller.append(markup);
+        // $('body').css('background-image', ('url("../assets/background-images/' +icon+'.jpg")'));
+        $('body').css({
+            'backgroundImage': 'url("../assets/background-images/' + icon +'.jpg")',
+            'backgroundRepeat': 'no-repeat',
+            'backgroundPosition': 'top center'
+        });
+    }
+
+    /* Error handling functions */
+
+    function locationError(error) {
+        switch (error.code) {
+            case error.TIMEOUT:
+                showError("A timeout occured! Please try again!");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                showError('We can\'t detect your location. Sorry!');
+                break;
+            case error.PERMISSION_DENIED:
+                showError('Please allow geolocation access for this to work.');
+                break;
+            case error.UNKNOWN_ERROR:
+                showError('An unknown error occured!');
+                break;
+        }
+    }
+
+    function convertTemperature(kelvin) {
+        // Convert the temperature to either Celsius or Fahrenheit:
+        return Math.round(DEG == 'c' ? (kelvin - 273.15) : (kelvin * 9 / 5 - 459.67));
+    }
+
+    function showError(msg) {
+        weatherDiv.addClass('error').html(msg);
+    }
+});
+        </script>
+
+
+    </body>
+</html>
