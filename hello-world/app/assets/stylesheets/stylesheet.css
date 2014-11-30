@@ -5,3 +5,15 @@ body {
 #alarm-div{
   background-color: red;
 }
+
+#widget-box{
+  background-color: white;
+  opacity: .9;
+  border-radius: 15px;
+  box-shadow: 5px 5px 2px black;
+}
+
+#alarm-box{
+  background-color: white;
+  opacity: 90%;
+}

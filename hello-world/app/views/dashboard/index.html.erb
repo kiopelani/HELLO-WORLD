@@ -4,10 +4,23 @@
   <p>Logged in as <%= current_user.email %></p>
 <% end %>
 
+<div class = "row">
+  <div id="widget-box" class = "col-sm-3">
+    <center>
+    <%= render 'widgets/weather' %>
+  </center>
+  </div>
 
-<%= render 'widgets/stock' %>
+</div>
 
+<div id="widget-box">
+  <%= render 'widgets/alarm' %>
+</div>
 
-<%= render 'widgets/alarm' %>
-<%= render 'widgets/news' %>
-<%= render 'widgets/weather' %>
+<div id="widget-box">
+  <%= render 'widgets/stock' %>
+</div>
+
+<div id="widget-box">
+  <%= render 'widgets/news' %>
+</div>
