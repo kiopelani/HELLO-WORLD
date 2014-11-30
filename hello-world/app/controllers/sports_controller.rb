@@ -21,17 +21,12 @@ class SportsController < ApplicationController
     end
     away_scores = all_scores.values_at(* all_scores.each_index.select { |i| i.even? })
     home_scores = all_scores.values_at(* all_scores.each_index.select { |i| i.odd? })
-
-
-    page_top = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/20141128/"))
-    imgs_top = page_top.css('div.nbaModTopTeamAw img')
+    imgs_top = page.css('div.nbaModTopTeamAw img')
     imgs_top.each_with_index do |img, index|
       away_team_gifs << img.attributes["src"].value.gsub("12","").strip
       away_teams << img.attributes["title"].value
     end
-
-    page_bot = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/20141128/"))
-    imgs_bot = page_bot.css('div.nbaModTopTeamHm img')
+    imgs_bot = page.css('div.nbaModTopTeamHm img')
     imgs_bot.each_with_index do |img, index|
       home_team_gifs << img.attributes["src"].value.gsub("12","").strip
       home_teams << img.attributes["title"].value
@@ -48,7 +43,6 @@ class SportsController < ApplicationController
     games_num = home_teams.count
     counter = 0
     games_num.times do
-      p counter
       games_arr <<Game.new({  "home_team" => home_teams[counter],
                               "away_team" => away_teams[counter],
                               "home_score" => home_scores[counter],
