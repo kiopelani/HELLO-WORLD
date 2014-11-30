@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :stocks
-  has_many :news_items
+  has_many :newsitems
   has_many :spotify_preferences
 
   has_many :widgets
