@@ -27,9 +27,10 @@ class WidgetsController < ApplicationController
 
   def destroy
     @user = current_user
+    # @widget = @user.widgets.find(params[:id])
     @widget = Widget.find(params[:id])
     @widget.destroy
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   private
