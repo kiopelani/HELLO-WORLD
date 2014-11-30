@@ -3,3 +3,11 @@
 <% if user_signed_in? %>
   <p>Logged in as <%= current_user.email %></p>
 <% end %>
+
+
+<%= render 'widgets/stock' %>
+
+
+<%= render 'widgets/alarm' %>
+<%= render 'widgets/news' %>
+<%= render 'widgets/weather' %>
