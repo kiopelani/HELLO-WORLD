@@ -22,7 +22,6 @@
 //= require ../../../vendor/assets/javascripts/moment.min.js
 //= require ../../../vendor/assets/javascripts/jquery.gridster.js
 // = require stocks/stocks_controller
-// = require sports/sports_controller
 
 angular.module('StockApp', [
   'StockApp.controllers'
