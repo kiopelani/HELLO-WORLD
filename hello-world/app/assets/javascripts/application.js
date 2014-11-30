@@ -20,6 +20,7 @@
 //= require_tree .
 //= require ../../../vendor/assets/bootstrap-3/js/bootstrap.min.js
 //= require ../../../vendor/assets/javascripts/moment.min.js
+//= require ../../../vendor/assets/javascripts/gridstack.min.js
 // = require stocks/stocks_controller
 // = require sports/sports_controller
 
