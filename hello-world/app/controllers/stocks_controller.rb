@@ -1,4 +1,4 @@
-require 'stock_quote'
+ require 'stock_quote'
 require 'pp'
 
 class StocksController < ApplicationController
