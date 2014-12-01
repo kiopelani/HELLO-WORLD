@@ -1,19 +1,48 @@
-<% if @user.widgets.length == 0 %>
-    <h3>You have no widgets!</h3>
-    <button><%= link_to 'Add widgets', add_widgets_path %> </button>
-<% else %>
-    <h3> You have <%=@user.widgets.length %> widgets. </h3>
-    <div class="gridster">
+<h3> You have <%=@user.widgets.length %> widgets. </h3>
+<div class="gridster" id="user-widget-list">
     <ul>
     <% @user.widgets.each do |widget| %>
-        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3"><button><%= link_to 'X', "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %> </button>  <%= render "widgets/#{widget.name}" %></li>
-    <% end %>
-<% end %>
+        <% if widget.name == "weather" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="2" data-sizey="2">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
 
+        <% elsif widget.name == "stock" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="4" data-sizey="2">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "alarm" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "music" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "newsitem" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+
+        <% else %>
+        <h1> <%= widget.name %> </h1>
+        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3"><%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %>   <%= render "widgets/#{widget.name}" %></li>
+        <% end %>
+    <% end %>
+</ul>
 
 <script>
     $('.gridster ul').gridster({
         widget_margins: [10,10], //10px margins
         widget_base_dimensions: [100,100] //100px width/height
     })
+
+    var theGrid = $('.gridster ul').gridster
+    theGrid.resize_widget_dimensions({widget_base_dimensions: [100,  100]});
+
 </script>
