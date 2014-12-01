@@ -14,7 +14,8 @@ class SportsController < ApplicationController
     home_teams = []
     home_team_gifs = []
 
-    page = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/20141128/"))
+    yest_string = "#{Date.yesterday.year}#{Date.yesterday.month}#{Date.yesterday.day}"
+    page = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/#{yest_string}/"))
     scores_top = page.css('div.nbaModTopTeamNum')
     scores_top.each do |score|
       all_scores << score.text.to_i
@@ -31,13 +32,6 @@ class SportsController < ApplicationController
       home_team_gifs << img.attributes["src"].value.gsub("12","").strip
       home_teams << img.attributes["title"].value
     end
-
-    # pp away_scores
-    # pp home_scores
-    # pp away_team_gifs
-    # pp away_teams
-    # pp home_team_gifs
-    # pp home_teams
 
     games_arr = []
     games_num = home_teams.count
