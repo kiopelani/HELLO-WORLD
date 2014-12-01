@@ -6,10 +6,10 @@
     <div class="gridster">
     <ul>
     <% @user.widgets.each do |widget| %>
-        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3"><button><%= link_to 'X', "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %> </button>  <%= render "widgets/#{widget.name}" %></li>
+        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3"><%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'} %>   <%= render "widgets/#{widget.name}" %></li>
+
     <% end %>
 <% end %>
-
 
 <script>
     $('.gridster ul').gridster({
