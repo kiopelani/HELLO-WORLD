@@ -51,8 +51,16 @@ class WidgetsController < ApplicationController
   def destroy
     @user = current_user
     @widget = Widget.find(params[:id])
-    @widget.destroy
-    redirect_to dashboard_path
+
+    respond_to do |format|
+      if @widget.destroy
+        format.html { redirect_to dashboard_path }
+        format.js { render :locals => { widget: @widget.id }}
+      else
+        format.html {}
+        format.js {}
+      end
+    end
   end
 
   private

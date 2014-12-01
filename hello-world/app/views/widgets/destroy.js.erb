@@ -1,0 +1,3 @@
+$('#user-widget-list').bind('ajax:success', function(e) {
+  $('li[data-id="<%= widget %>"]').remove();
+});
