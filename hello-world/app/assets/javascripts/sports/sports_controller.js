@@ -1,4 +1,3 @@
-
 angular.module('SportApp.controllers', [])
 .controller('sportAppCtrl', function($scope, $http, sportAPIservice) {
   $scope.sportList = [];

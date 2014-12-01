@@ -2,7 +2,7 @@ require 'stock_quote'
 require 'pp'
 
 class StocksController < ApplicationController
-  before_action :load_user
+  before_action       :load_user
   skip_before_filter  :verify_authenticity_token
 
   def index
@@ -24,9 +24,9 @@ class StocksController < ApplicationController
     stock = Stock.new(user_id: @user.id, symbol: params["symbol"])
     respond_to do |format|
       if stock.save
-        pp stock
-        pp stock.to_json
         format.js { render json: stock }
+      else
+        puts "you failed"
       end
     end
     # if params[:commit].strip == "Add stock"
