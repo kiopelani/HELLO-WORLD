@@ -1,11 +1,12 @@
-$('<li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3">WIDGET!!!</li>').appendTo( "#user-widget-list" );
-$("#user-widget-list" ).gridster({
-        widget_margins: [10,10], //10px margins
-        widget_base_dimensions: [100,100] //100px width/height
-    })
+// $('<li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" class="gs-w">WIDGET!!!</li>').appendTo( "#user-widget-list ul" );
 
-    var theGrid = $( "#user-widget-list" ).gridster
-    theGrid.resize_widget_dimensions({widget_base_dimensions: [100,  100]});
+// $("#user-widget-list ul" ).gridster({
+//         widget_margins: [10,10], //10px margins
+//         widget_base_dimensions: [100,100] //100px width/height
+//     })
+
+//     var theGrid = $( "#user-widget-list ul" ).gridster
+//     theGrid.resize_widget_dimensions({widget_base_dimensions: [100,  100]});
 
 
-
+$("#user-widget-list").add_widget('<div><h2>HELLO</h2></div>',[3],[3],[1],[1])
