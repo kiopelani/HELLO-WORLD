@@ -7,6 +7,7 @@ angular.module('StockApp.services', []).
         url: '/dashboard/stocks/endpoint'
       });
     }
+
     return stockAPI;
   });
 

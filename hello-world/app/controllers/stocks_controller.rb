@@ -24,7 +24,9 @@ class StocksController < ApplicationController
     stock = Stock.new(user_id: @user.id, symbol: params["symbol"])
     respond_to do |format|
       if stock.save
-        format.js { }
+        pp stock
+        pp stock.to_json
+        format.js { render json: stock }
       end
     end
     # if params[:commit].strip == "Add stock"
