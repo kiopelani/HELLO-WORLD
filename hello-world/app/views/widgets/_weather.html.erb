@@ -56,14 +56,25 @@
     function addWeather(icon, city, currentTemperature, tempMin, tempMax, conditioncurrcondition) {
 
         var markup = '' +
+            '<div id=\"city\">' +
+                '<h4 id=\"city\">' + city + '</h4>' +
+            '</div>' +
             '<div id= \"weather-icon\" class=\"pull-left\">' +
-                '<img src="../assets/icons/' + icon + '.png" />' +
+                '<img id= \"weather-icon\" src="../assets/icons/' + icon + '.png" />' +
             '</div>' +
             '<div id= \"temperature\" class=\"pull-right\">' +
                 '<h1 class=\"temperatureInfo\">' + currentTemperature + '</h1>' +
             '</div>' +
-            '<p class="cond">' + conditioncurrcondition + '</p>' +
-            '</div>';
+
+            '<div id= \"currcondition\" class=\"pull-left\">' +
+                '<h4 id=\"currcondition\">' + conditioncurrcondition + '</h4>' +
+            '</div>' +
+
+            '<div id= \"temps\" class=\"pull-right\">' +
+                '<h4 id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</h4>' +
+            '</div>'
+
+            ;
 
         scroller.append(markup);
         // $('body').css('background-image', ('url("../assets/background-images/' +icon+'.jpg")'));
