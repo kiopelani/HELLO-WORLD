@@ -141,26 +141,8 @@ body {
     list-style: none;
 }
 
-.yellow{
-    background-color: yellow;
-}
-
-.black{
-    background-color: black;
-}
-
-.gray{
-    background-color: #ccc;
-}
-
-.blue{
-    background-color: blue;
-}
-
-.green{
-    background-color: green;
-}
-
-.purple{
-    background-color: purple;
+#temperature h1{
+    margin-top: -10%;
+    margin-right: 25px;
+    font-size: 115px
 }

@@ -1,9 +1,10 @@
 
 <div id="weather">
-    <ul id="scroller">
+    <div id="scroller">
         <!-- The forecast items will go here -->
-    </ul>
+    </div>
 </div>
+
 <script>
     $(function() {
     /* Configuration */
@@ -36,24 +37,33 @@
             var city = response.name
             var icon = response.weather[0].icon
             var condition = response.weather[0].description
-            var currentTemperature = convertTemperature(response.main.temp) + '°' + DEG
-            var tempMinMax = convertTemperature(response.main.temp_min) + '°' + DEG + ' / ' + convertTemperature(response.main.temp_max) + '°' + DEG + '</b>'
+            var currentTemperature = convertTemperature(response.main.temp) + '°'
+            var tempMin = convertTemperature(response.main.temp_min) + '°'
+            var tempMax = convertTemperature(response.main.temp_max) + '°'
 
             addWeather(
                 icon,
-                city + '<br>' +currentTemperature + '<br>' + tempMinMax,
+                city,
+                currentTemperature,
+                tempMin,
+                tempMax,
                 condition
             );
             // location.html(city);
         });
     }
 
-    function addWeather(icon, temperatureInfo, condition) {
+    function addWeather(icon, city, currentTemperature, tempMin, tempMax, conditioncurrcondition) {
 
-        var markup = '<li>' +
-            '<img src="../assets/icons/' + icon + '.png" />' +
-            ' <p class="temperatureInfo">' + temperatureInfo + '</p> <p class="cond">' + condition +
-            '</p></li>';
+        var markup = '' +
+            '<div id= \"weather-icon\" class=\"pull-left\">' +
+                '<img src="../assets/icons/' + icon + '.png" />' +
+            '</div>' +
+            '<div id= \"temperature\" class=\"pull-right\">' +
+                '<h1 class=\"temperatureInfo\">' + currentTemperature + '</h1>' +
+            '</div>' +
+            '<p class="cond">' + conditioncurrcondition + '</p>' +
+            '</div>';
 
         scroller.append(markup);
         // $('body').css('background-image', ('url("../assets/background-images/' +icon+'.jpg")'));
