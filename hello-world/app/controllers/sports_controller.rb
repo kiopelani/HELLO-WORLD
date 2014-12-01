@@ -60,9 +60,3 @@ class Game
     @away_gif   = params["away_gif"]
   end
 end
-
-
-
-
-
-
