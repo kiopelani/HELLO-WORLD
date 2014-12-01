@@ -1,15 +1,18 @@
-// $('<li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>">WIDGET!!!</li>').appendTo( "#user-widget-list ul" );
-
-
 var gridster;
   $(function(){
+    var widgetString = "<li id='widget-box' data-id='<%=widget.id%>'>WHYYYYYYY</li>";
+
+
     gridster = $(".gridster ul").gridster({          widget_margins: [10, 10],
       widget_base_dimensions: [100, 100]}).data('gridster');
         var widgets = [
-        ['<li id="widget-box" data-col="1" data-row="1" data-id="<%=widget.id %>">WIDGET!!!</li>', 2, 2]
+        [widgetString, 2, 2, 1, 1]
         ];
+
 
         $.each(widgets, function(i, widget){
         gridster.add_widget.apply(gridster, widget)
       });
     });
+
+
