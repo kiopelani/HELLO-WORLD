@@ -17,4 +17,17 @@ angular.module('StockApp.controllers', [])
       console.log('Fail');
     });
   }
+
+  $scope.remove = function() {
+    $http( {method: 'delete', url: "dashboard/stocks/delete" , headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}, params: {symbol: $scope.text}})
+    .success( function(data) {
+      stockAPIservice.getStocks().success(function (data) {
+        $scope.StockList = data;
+      })
+    })
+    .error( function(data, status, headers, config) {
+      console.log('Fail');
+    });
+  }
+
 });
