@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'dashboard/weather' => 'weather#index'
   get 'dashboard/alarm' => 'alarm#index'
   get 'dashboard/stocks' => 'stocks#index'
-  post 'dashboard/stocks/edit' => 'stocks#edit'
+  post 'dashboard/stocks/add' => 'stocks#add'
   get 'dashboard/stocks/endpoint' => 'stocks#endpoint'
   get 'dashboard/sports' => 'sports#index'
   get 'dashboard/sports/endpoint' => 'sports#endpoint'
