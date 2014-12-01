@@ -29,13 +29,14 @@ class StocksController < ApplicationController
         puts "you failed"
       end
     end
-    # if params[:commit].strip == "Add stock"
-      # @stock_symbols << params[:stock][:symbol]
-    # end
-    # if params[:commit].strip == "Remove stock"
-      # @stock_symbols.delete(params[:stock][:symbol])
-    # end
-    # update_stocks
+  end
+  def destroy
+    stock = Stock.find_by(user_id: @user.id, symbol: params["symbol"])
+    respond_to do |format|
+      if stock.destroy
+        format.js { render json: stock }
+      end
+    end
   end
   def endpoint
     update_stocks
