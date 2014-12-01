@@ -2,7 +2,7 @@
     <ul>
     <% @user.widgets.each do |widget| %>
         <% if widget.name == "weather" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #77DEFF">
+            <li id="widget-box-weather" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #77DEFF">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
