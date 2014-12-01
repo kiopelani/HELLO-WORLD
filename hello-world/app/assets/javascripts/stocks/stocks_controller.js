@@ -1,6 +1,5 @@
 angular.module('StockApp.controllers', [])
 .controller('stockAppCtrl', function($scope, $http, stockAPIservice) {
-  var self = this;
   $scope.stockList = [];
   stockAPIservice.getStocks().success(function (data) {
     $scope.StockList = data;

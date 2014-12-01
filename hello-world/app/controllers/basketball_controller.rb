@@ -3,21 +3,20 @@ require 'nokogiri'
 require 'open-uri'
 require 'restclient'
 
-class SportsController < ApplicationController
+class BasketballController < ApplicationController
   def index
   end
   def endpoint
-    all_scores = []
-    away_scores = []
-    away_teams = []
+    all_scores     = []
+    away_teams     = []
     away_team_gifs = []
-    home_teams = []
+    home_teams     = []
     home_team_gifs = []
 
     yest_string = "#{Date.yesterday.year}#{Date.yesterday.month}#{Date.yesterday.day}"
     page = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/#{yest_string}/"))
-    scores_top = page.css('div.nbaModTopTeamNum')
-    scores_top.each do |score|
+    scores = page.css('div.nbaModTopTeamNum')
+    scores.each do |score|
       all_scores << score.text.to_i
     end
     away_scores = all_scores.values_at(* all_scores.each_index.select { |i| i.even? })

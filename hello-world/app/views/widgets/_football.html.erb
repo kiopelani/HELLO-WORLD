@@ -1,0 +1,27 @@
+<table ng-controller="footballAppCtrl">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Home Team</th>
+      <th>Score</th>
+      <th>Score</th>
+      <th>Away Team</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="game in GameList">
+      <td>
+        <img ng-src="{{game.home_gif}}" />
+      </td>
+      <td>{{game.home_team}}</td>
+      <td>{{game.home_score}}</td>
+      <td>{{game.away_score}}</td>
+      <td>{{game.away_team}}</td>
+      <td>
+        <img ng-src="{{game.away_gif}}" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
