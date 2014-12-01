@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'dashboard/alarm' => 'alarm#index'
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/add' => 'stocks#add'
+  delete 'dashboard/stocks/delete' => 'stocks#destroy'
   get 'dashboard/stocks/endpoint' => 'stocks#endpoint'
   get 'dashboard/sports' => 'sports#index'
   get 'dashboard/sports/endpoint' => 'sports#endpoint'
