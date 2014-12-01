@@ -14,8 +14,6 @@
 //= require jquery_ujs
 //= require angular
 //= require turbolinks
-//= require react
-//= require react_ujs
 //= require components
 //= require_tree .
 //= require ../../../vendor/assets/bootstrap-3/js/bootstrap.min.js
