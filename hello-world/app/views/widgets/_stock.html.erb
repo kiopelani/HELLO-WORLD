@@ -1,34 +1,27 @@
-<h3>Stock Widget:</h3>
-<table ng-controller="stockAppCtrl">
-  <thead>
-    <tr>
-      <th>Symbol</th>
-      <th>Name</th>
-      <th>Day High</th>
-      <th>Day Low</th>
-      <th>Last Price</th>
-      <th>Market Cap</th>
-      <th>Volume</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="stock in StockList">
-      <td>{{stock.symbol}}</td>
-      <td>{{stock.name}}</td>
-      <td>{{stock.days_high | currency}}</td>
-      <td>{{stock.days_low | currency}}</td>
-      <td>{{stock.last_trade_price_only | currency}}</td>
-      <td>${{stock.market_capitalization}}</td>
-      <td>{{stock.volume | number}}</td>
-    </tr>
-  </tbody>
-</table>
-<br>
-<h4>Add or remove a stock by entering the symbol:</h4>
 <div ng-controller="stockAppCtrl">
-  <form ng-submit="add()">
-    Stock Symbol:
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Current Price</th>
+        <th>Mkt Cap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="stock in StockList">
+        <td>{{stock.symbol}}</td>
+        <td>{{stock.name}}</td>
+        <td>{{stock.last_trade_price_only | currency}}</td>
+        <td>${{stock.market_capitalization}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <div>Add or Remove Stock Symbol:</div>
+  <form ng-submit="form">
     <input type="text" ng-model="text" name="symbol" />
-    <input type="submit" value="Add Stock" />
+    <input type="submit" ng-click="add()" value="Add Stock" />
+    <input type="submit" ng-click="remove()" value="Remove Stock" />
   </form>
 </div>

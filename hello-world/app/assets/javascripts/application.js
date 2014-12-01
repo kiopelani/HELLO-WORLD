@@ -25,15 +25,13 @@
 // = require sports/sports_controller
 
 angular.module('StockApp', [
-  'StockApp.controllers'
-]);
-
-angular.module('AlarmApp', [
-  'AlarmApp.controllers'
+  'StockApp.controllers',
+  'StockApp.services'
 ]);
 
 angular.module('SportApp', [
-  'SportApp.controllers'
+  'SportApp.controllers',
+  'SportApp.services'
 ]);
 
 angular.module('myApp', ['StockApp', 'SportApp'])
