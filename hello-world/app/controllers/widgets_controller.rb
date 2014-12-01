@@ -19,10 +19,21 @@ class WidgetsController < ApplicationController
       redirect_to dashboard_path
     else
       @widget = @user.widgets.new(widget_params)
-      if @widget.save
-        redirect_to dashboard_path
-      else
-        flash[:alert] = "Your widget could not be saved. Please try again."
+      respond_to do |format|
+        if @widget.save
+          format.html { p "I SAVED IN HTML!!!"
+            redirect_to dashboard_path }
+          format.js {
+            p "I SAVED IN JS!!!!!!"
+            render :create, locals: {widget: @widget} }
+        else
+          format.html { p "I DIDN'T SAVE IN HTML!!!"
+            redirect_to dashboard_path }
+          format.js {
+            p "I DIDN'T SAVE IN JS!!!"
+            flash[:alert] = "Your widget could not be saved. Please try again."
+            render :'dashboard/index' }
+        end
       end
     end
   end
