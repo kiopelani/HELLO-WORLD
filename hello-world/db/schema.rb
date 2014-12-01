@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141130010330) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "spotify_preferences", force: true do |t|
+  create_table "music", force: true do |t|
     t.integer  "user_id"
     t.string   "playlist"
     t.datetime "created_at"
