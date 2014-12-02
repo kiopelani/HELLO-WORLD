@@ -648,8 +648,13 @@ footer #tzine-actions iframe{
     background-color: #fbc97f;
 }
 
-/*.widget-content {
-    margin: 20px;
-}*/
+.weather-text {
+    font-size: 9px;
+}
 
+.weather-city {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
 
