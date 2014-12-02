@@ -6,7 +6,11 @@ body {
   background-position: center center;
   margin-bottom: 60px;
   /*border: 30px solid black;*/
-  color: white;
+
+}
+
+#page-content{
+      color: white;
 }
 
 a{
@@ -589,3 +593,7 @@ footer #tzine-actions iframe{
 #city{
     margin-right: 20%;
 }
+/*
+#alarm-modal{
+    color: black;
+}*/

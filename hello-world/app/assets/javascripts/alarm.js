@@ -30,6 +30,6 @@ $(document).ready(function() {
     $('#alarm-div').addClass("pulse");
     // $('#alarm-div').style(visibility:"block");
 
-    alert('times up!');
+    $('#alarm-modal').modal('toggle')
 
   };
