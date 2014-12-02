@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
   get 'dashboard/clock' => 'clock#index', as: 'clock'
 
+  get '/auth/spotify/callback', to: 'music#spotify'
+
 
   resources :widgets
 

@@ -1,12 +1,4 @@
-
-<div id="weather">
-    <div id="scroller">
-        <!-- The forecast items will go here -->
-    </div>
-</div>
-
-<script>
-    $(function() {
+$(function() {
     /* Configuration */
     var DEG = 'f'; // c for celsius, f for fahrenheit
 
@@ -57,9 +49,7 @@
 
         var markup = '' +
             '<div id=\"city\">' +
-                '<center>' +
-                '<p id=\"city\" style="font-size:30px margin-right:-170px">' + city + '</p>' +
-                '</center>' +
+                '<h4 id=\"city\">' + city + '</h4>' +
             '</div>' +
             '<div id= \"weather-icon\" class=\"pull-left\">' +
                 '<img id= \"weather-icon\" src="../assets/icons/' + icon + '.png" />' +
@@ -67,11 +57,14 @@
             '<div id= \"temperature\" class=\"pull-right\">' +
                 '<h1 class=\"temperatureInfo\">' + currentTemperature + '</h1>' +
             '</div>' +
-            '<center>' +
-            '<div id= \"temps\">' +
-                '<p id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</p>' +
+
+            '<div id= \"currcondition\" class=\"pull-left\">' +
+                '<h4 id=\"currcondition\">' + conditioncurrcondition + '</h4>' +
             '</div>' +
-            '</center>'
+
+            '<div id= \"temps\" class=\"pull-right\">' +
+                '<h4 id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</h4>' +
+            '</div>'
 
             ;
 
@@ -115,4 +108,3 @@
         weatherDiv.addClass('error').html(msg);
     }
 });
-</script>
