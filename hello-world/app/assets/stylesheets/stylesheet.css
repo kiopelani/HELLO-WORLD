@@ -17,7 +17,11 @@ a{
     color: white;
 }
 
-
+button {
+    opacity: 0.4;
+    background-color: transparent;
+    border: none;
+}
 
 /*-------------------------
     The clocks
