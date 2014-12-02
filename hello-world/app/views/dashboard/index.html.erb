@@ -53,7 +53,13 @@
         <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>"><%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "widgets/#{widget.name}" %></li>
         <% end %>
     <% end %>
+
+    <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" style="background-color:black"><%= link_to '<button type="button">X</button>'.html_safe, "/widgets/bart_planner", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "widgets/bart_planner" %></li>
+
 </ul>
+
+
+
 
 
 <script>
