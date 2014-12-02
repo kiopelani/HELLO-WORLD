@@ -49,7 +49,7 @@ $(function() {
 
         var markup = '' +
             '<div id=\"city\">' +
-                '<h4 id=\"city\">' + city + '</h4>' +
+                '<h5 id=\"city\">' + city + '</h5>' +
             '</div>' +
             '<div id= \"weather-icon\" class=\"pull-left\">' +
                 '<img id= \"weather-icon\" src="../assets/icons/' + icon + '.png" />' +
@@ -59,11 +59,11 @@ $(function() {
             '</div>' +
 
             '<div id= \"currcondition\" class=\"pull-left\">' +
-                '<h4 id=\"currcondition\">' + conditioncurrcondition + '</h4>' +
+                '<h5 id=\"currcondition\">' + conditioncurrcondition + '</h5>' +
             '</div>' +
 
             '<div id= \"temps\" class=\"pull-right\">' +
-                '<h4 id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</h4>' +
+                '<h5 id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</h5>' +
             '</div>'
 
             ;
