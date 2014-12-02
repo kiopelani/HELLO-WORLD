@@ -68,3 +68,5 @@ class WidgetsController < ApplicationController
       params.require(:widget).permit(:name)
     end
 end
+
+
