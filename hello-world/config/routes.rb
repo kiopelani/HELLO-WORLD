@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get 'dashboard/sports/endpoint' => 'sports#endpoint'
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
 
+  get '/auth/spotify/callback', to: 'music#spotify'
+
 
   resources :widgets
 
