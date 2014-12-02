@@ -12,7 +12,7 @@
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "alarm" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="1" data-id="<%=widget.id %>" style="background-color: MediumPurple">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="1" data-id="<%=widget.id %>" style="background-color: Orange">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
