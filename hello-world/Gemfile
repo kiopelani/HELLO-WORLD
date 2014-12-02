@@ -45,7 +45,8 @@ group :development, :test do
   gem 'rails-assets-angular-mocks'
 end
 
-gem "font-awesome-rails"
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
