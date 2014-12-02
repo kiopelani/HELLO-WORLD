@@ -22,13 +22,13 @@ class FootballController < ApplicationController
     all_teams = []
     teams = page.css(".teamName")
     teams.each do |team, index|
-      all_teams << team.children[1].children[0].children.text+" "+team.children[1].children[1].children.text
+      all_teams << team.children[1].children[0].children.text
     end
     games_arr = []
     games_num = all_scores.count / 2
     counter = 0
     games_num.times do
-      games_arr <<Game.new({  "away_team" => all_teams[counter],
+      games_arr << Game.new({ "away_team" => all_teams[counter],
                               "home_team" => all_teams[counter+1],
                               "away_score" => all_scores[counter],
                               "home_score" => all_scores[counter+1],

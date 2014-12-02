@@ -1,6 +1,7 @@
 <table ng-controller="basketballAppCtrl">
   <thead>
-    <tr>
+    NBA Scores - <%= Date.yesterday %>
+    <tr style="size:8px">
       <th></th>
       <th>Home Team</th>
       <th>Score</th>
@@ -10,18 +11,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="game in GameList">
+    <tr style="size:8px" ng-repeat="game in GameList">
       <td>
-        <img style="30px" ng-src="{{game.home_gif}}" />
+        <img style="width: 25px" ng-src="{{game.home_gif}}" />
       </td>
       <td>{{game.home_team}}</td>
       <td>{{game.home_score}}</td>
       <td>{{game.away_score}}</td>
       <td>{{game.away_team}}</td>
       <td>
-        <img style="30px" ng-src="{{game.away_gif}}" />
+        <img style="width: 25px" ng-src="{{game.away_gif}}" />
       </td>
     </tr>
   </tbody>
 </table>
-

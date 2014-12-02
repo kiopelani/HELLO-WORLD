@@ -13,7 +13,7 @@ class BasketballController < ApplicationController
     home_teams     = []
     home_team_gifs = []
 
-    yest_string = "#{Date.yesterday.year}#{Date.yesterday.month}#{Date.yesterday.day}"
+    yest_string = "#{Date.yesterday.year}#{Date.yesterday.month}0#{Date.yesterday.day}"
     page = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/#{yest_string}/"))
     scores = page.css('div.nbaModTopTeamNum')
     scores.each do |score|
@@ -24,19 +24,25 @@ class BasketballController < ApplicationController
     imgs_top = page.css('div.nbaModTopTeamAw img')
     imgs_top.each_with_index do |img, index|
       away_team_gifs << img.attributes["src"].value.gsub("12","").strip
-      away_teams << img.attributes["title"].value
     end
     imgs_bot = page.css('div.nbaModTopTeamHm img')
     imgs_bot.each_with_index do |img, index|
       home_team_gifs << img.attributes["src"].value.gsub("12","").strip
-      home_teams << img.attributes["title"].value
+    end
+    teams_top = page.css('div.nbaModTopTeamAw')
+    teams_top.each_with_index do |team, index|
+      away_teams << team.text.gsub(/\d/,"").upcase
+    end
+    teams_bot = page.css('div.nbaModTopTeamHm')
+    teams_bot.each_with_index do |team, index|
+      home_teams << team.text.gsub(/\d/,"").upcase
     end
 
     games_arr = []
     games_num = home_teams.count
     counter = 0
     games_num.times do
-      games_arr <<Game.new({  "home_team" => home_teams[counter],
+      games_arr << Game.new({ "home_team" => home_teams[counter],
                               "away_team" => away_teams[counter],
                               "home_score" => home_scores[counter],
                               "away_score" => away_scores[counter],
