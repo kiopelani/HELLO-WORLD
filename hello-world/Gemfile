@@ -45,6 +45,8 @@ group :development, :test do
   gem 'rails-assets-angular-mocks'
 end
 
+gem "font-awesome-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
