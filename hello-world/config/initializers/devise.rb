@@ -237,10 +237,9 @@ Devise.setup do |config|
 
   require 'omniauth-google-oauth2'
   config.omniauth :google_oauth2,
-  "APP_ID",
-  "APP_SECRET",
+  ENV["APP_ID"],
+  ENV["APP_SECRET"],
   { access_type: "offline", approval_prompt: "" }
-
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
