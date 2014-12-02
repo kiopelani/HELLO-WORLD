@@ -3,6 +3,14 @@ angular.module('StockApp.controllers', [])
   $scope.stockList = [];
   stockAPIservice.getStocks().success(function (data) {
     $scope.StockList = data;
+    var count = $scope.StockList.length
+    if (count < 3) {
+      $('#stocky').parent().attr("data-sizey","2");
+    } else if (count < 6 ) {
+      $('#stocky').parent().attr("data-sizey","3");
+    } else {
+      $('#stocky').parent().attr("data-sizey","4");
+    }
   })
   $scope.set_sizey = function() {
 
@@ -12,6 +20,14 @@ angular.module('StockApp.controllers', [])
     .success( function(data) {
       stockAPIservice.getStocks().success(function (data) {
         $scope.StockList = data;
+        var count = $scope.StockList.length
+        if (count < 3) {
+          $('#stocky').parent().attr("data-sizey","2");
+        } else if (count < 6 ) {
+          $('#stocky').parent().attr("data-sizey","3");
+        } else {
+          $('#stocky').parent().attr("data-sizey","4");
+        }
       })
     })
     .error( function(data, status, headers, config) {
@@ -23,6 +39,14 @@ angular.module('StockApp.controllers', [])
     .success( function(data) {
       stockAPIservice.getStocks().success(function (data) {
         $scope.StockList = data;
+        var count = $scope.StockList.length
+        if (count < 3) {
+          $('#stocky').parent().attr("data-sizey","2");
+        } else if (count < 6 ) {
+          $('#stocky').parent().attr("data-sizey","3");
+        } else {
+          $('#stocky').parent().attr("data-sizey","4");
+        }
       })
     })
     .error( function(data, status, headers, config) {
