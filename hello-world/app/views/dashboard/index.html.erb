@@ -6,24 +6,23 @@
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
-
         <% elsif widget.name == "stock" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #00C1FF">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: orange">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "alarm" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="1" data-id="<%=widget.id %>" style="background-color: #2980b9">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="1" data-id="<%=widget.id %>" style="background-color: MediumPurple">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "music" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="4" data-id="<%=widget.id %>" style="background-color: #1C677F">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="4" data-id="<%=widget.id %>" style="background-color: LimeGreen">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "newsitem" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>" style="background-color: #009BCC">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>" style="background-color: gold">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
@@ -65,8 +64,9 @@
 </script>
 
 <center>
-     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-   </center>
+     <a href="#menu-toggle" class="btn btn-primary btn-lg" id="menu-toggle">Toggle Menu</a>
+</center>
+
    <script>
    $("#menu-toggle").click(function(e) {
     e.preventDefault();
