@@ -26,7 +26,6 @@ Rails.application.routes.draw do
 
   get '/auth/spotify/callback', to: 'music#spotify'
 
-
   resources :widgets
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

@@ -45,7 +45,7 @@
         <% elsif widget.name == "video" %>
             <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>" style="background-color: black">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
-                <%= render "widgets/#{widget.name}" %>
+                <%= render "widgets/#{widget.name}", locals: {video_link: @video_link} %>
             </li>
 
         <% else %>
