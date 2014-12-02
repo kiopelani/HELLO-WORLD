@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
 
   has_many :stocks
   has_many :newsitems
-  has_many :music_preferences
 
   has_many :widgets
 

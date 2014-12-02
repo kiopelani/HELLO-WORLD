@@ -11,9 +11,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body style>
+    <% if user_signed_in? %>
   <div id="wrapper">
     <!-- ##### NEW HEADER ##### -->
-    <% if user_signed_in? %>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
 
@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div ng-app="myApp" id="page-content">
+      <div ng-app="myApp" id="page-content" style="margin-top: 5%">
         <%= yield %>
       </div>
     </div>
@@ -82,7 +82,7 @@
    <div class = "navbar navbar-default navbar-fixed-bottom">
     <div class = "container">
       <p class = "navbar-text pull-left">Site Built By Kiope Gyzen, Youngsun Paik, Henry Tam, and Wesley Gauntt</p>
-      <a class = "navbar-btn btn-danger btn pull-right">We're great! </a>
+      <a class = "navbar-btn btn-warning btn pull-right">We're great! </a>
     </div>
   </div>
 
