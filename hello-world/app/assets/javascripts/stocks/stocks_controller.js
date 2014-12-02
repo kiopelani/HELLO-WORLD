@@ -1,11 +1,9 @@
 angular.module('StockApp.controllers', [])
 .controller('stockAppCtrl', function($scope, $http, stockAPIservice) {
-  var self = this;
   $scope.stockList = [];
   stockAPIservice.getStocks().success(function (data) {
     $scope.StockList = data;
   })
-
   $scope.add = function() {
     $http( {method: 'post', url: "dashboard/stocks/add" , headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}, data: {symbol: $scope.text}})
     .success( function(data) {
@@ -29,5 +27,13 @@ angular.module('StockApp.controllers', [])
       console.log('Fail');
     });
   }
-
+})
+.directive('myDirective', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      stockNum: '=info'
+    },
+    templateUrl: 'index.html.erb'
+  };
 });

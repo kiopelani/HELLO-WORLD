@@ -19,17 +19,19 @@
 //= require ../../../vendor/assets/bootstrap-3/js/bootstrap.min.js
 //= require ../../../vendor/assets/javascripts/moment.min.js
 //= require ../../../vendor/assets/javascripts/jquery.gridster.js
-// = require stocks/stocks_controller
-// = require sports/sports_controller
 
 angular.module('StockApp', [
-  'StockApp.controllers',
-  'StockApp.services'
+  'StockApp.services',
+  'StockApp.controllers'
+]);
+angular.module('FootballApp', [
+  'FootballApp.services',
+  'FootballApp.controllers'
 ]);
 
-angular.module('SportApp', [
-  'SportApp.controllers',
-  'SportApp.services'
+angular.module('BasketballApp', [
+  'BasketballApp.services',
+  'BasketballApp.controllers'
 ]);
 
-angular.module('myApp', ['StockApp', 'SportApp'])
+angular.module('myApp', ['StockApp', 'BasketballApp', 'FootballApp'])
