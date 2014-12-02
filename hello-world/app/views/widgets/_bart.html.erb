@@ -1,3 +1,5 @@
+<% options = yourDetailedTrip(@origin, @destination, @time)%>
+
 <div class="alert alert-success" role="alert"><h2>Early</h2><p><%=
 "Starting from #{options[0][0]}, your trip to #{options[0][1]} will take some time that I have left to implement. Board your train at #{options[0][0]} at #{options[0][3]} headed towards #{options[3]}, and you will arrive at #{options[0][1]} at #{options[0][5]}. Bring $#{options[0][2]} for fare. "%></p>
 </div>
