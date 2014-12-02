@@ -13,7 +13,6 @@ Devise.setup do |config|
   config.mailer_sender = 'hello-world.wykh@gmail.com'
 
 
-
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
