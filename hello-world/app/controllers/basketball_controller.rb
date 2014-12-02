@@ -42,12 +42,12 @@ class BasketballController < ApplicationController
     games_num = home_teams.count
     counter = 0
     games_num.times do
-      games_arr << Game.new({ "home_team" => home_teams[counter],
-                              "away_team" => away_teams[counter],
+      games_arr << Game.new({ "home_team"  => home_teams[counter],
+                              "away_team"  => away_teams[counter],
                               "home_score" => home_scores[counter],
                               "away_score" => away_scores[counter],
-                              "home_gif" => home_team_gifs[counter],
-                              "away_gif" => away_team_gifs[counter]
+                              "home_gif"   => home_team_gifs[counter],
+                              "away_gif"   => away_team_gifs[counter]
       })
       counter += 1
     end

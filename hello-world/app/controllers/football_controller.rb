@@ -28,12 +28,12 @@ class FootballController < ApplicationController
     games_num = all_scores.count / 2
     counter = 0
     games_num.times do
-      games_arr << Game.new({ "away_team" => all_teams[counter],
-                              "home_team" => all_teams[counter+1],
+      games_arr << Game.new({ "away_team"  => all_teams[counter],
+                              "home_team"  => all_teams[counter+1],
                               "away_score" => all_scores[counter],
                               "home_score" => all_scores[counter+1],
-                              "away_gif" => all_imgs[counter],
-                              "home_gif" => all_imgs[counter+1]
+                              "away_gif"   => all_imgs[counter],
+                              "home_gif"   => all_imgs[counter+1]
       })
       counter += 2
     end
