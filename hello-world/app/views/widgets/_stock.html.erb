@@ -1,4 +1,4 @@
-<div ng-controller="stockAppCtrl">
+<div id="stocky" ng-controller="stockAppCtrl">
   <table>
     <thead>
       <tr>
@@ -20,7 +20,7 @@
   <br>
   <div>Add or Remove Stock Symbol:</div>
   <form ng-submit="form">
-    <input type="text" ng-model="text" name="symbol" />
+    <p><input type="text" style="color: black" ng-model="text" name="symbol" /></p>
     <input type="submit" ng-click="add()" value="Add Stock" />
     <input type="submit" ng-click="remove()" value="Remove Stock" />
   </form>

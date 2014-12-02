@@ -17,9 +17,14 @@ Rails.application.routes.draw do
   post 'dashboard/stocks/add' => 'stocks#add'
   delete 'dashboard/stocks/delete' => 'stocks#destroy'
   get 'dashboard/stocks/endpoint' => 'stocks#endpoint'
-  get 'dashboard/sports' => 'sports#index'
-  get 'dashboard/sports/endpoint' => 'sports#endpoint'
+  get 'dashboard/basketball' => 'basketball#index'
+  get 'dashboard/basketball/endpoint' => 'basketball#endpoint'
+  get 'dashboard/football' => 'football#index'
+  get 'dashboard/football/endpoint' => 'football#endpoint'
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
+  get 'dashboard/clock' => 'clock#index', as: 'clock'
+
+  get '/auth/spotify/callback', to: 'music#spotify'
 
 
   resources :widgets

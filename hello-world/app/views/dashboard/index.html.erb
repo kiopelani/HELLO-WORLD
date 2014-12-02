@@ -1,30 +1,44 @@
-<h3> You have <%=@user.widgets.length %> widgets. </h3>
 <div class="gridster" id="user-widget-list">
     <ul>
     <% @user.widgets.each do |widget| %>
         <% if widget.name == "weather" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>">
+            <li id="widget-box-weather" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #77DEFF">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
 
         <% elsif widget.name == "stock" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="4" data-sizey="2" data-id="<%=widget.id %>">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #00C1FF">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "alarm" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="1" data-id="<%=widget.id %>" style="background-color: #2980b9">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "music" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="4" data-id="<%=widget.id %>" style="background-color: #1C677F">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "newsitem" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>">
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>" style="background-color: #009BCC">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "basketball" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>" style="background-color: #009BCC">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "football" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="4" data-id="<%=widget.id %>" style="background-color: #2980b9">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "clock" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="4" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #f3f3f3">
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
@@ -36,13 +50,21 @@
     <% end %>
 </ul>
 
+
 <script>
     $('.gridster ul').gridster({
-        widget_margins: [10,10], //10px margins
+        widget_margins: [5,5], //10px margins
         widget_base_dimensions: [100,100] //100px width/height
     })
 
-    var theGrid = $('.gridster ul').gridster
-    theGrid.resize_widget_dimensions({widget_base_dimensions: [100,  100]});
-
 </script>
+
+<center>
+     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+   </center>
+   <script>
+   $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+   </script>
