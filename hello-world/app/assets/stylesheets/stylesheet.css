@@ -17,7 +17,11 @@ a{
     color: white;
 }
 
-
+button {
+    opacity: 0.4;
+    background-color: transparent;
+    border: none;
+}
 
 /*-------------------------
     The clocks
@@ -597,3 +601,7 @@ footer #tzine-actions iframe{
 #alarm-modal{
     color: black;
 }*/
+
+.text-black {
+    color: black;
+}
