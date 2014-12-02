@@ -11,9 +11,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body style>
+    <% if user_signed_in? %>
   <div id="wrapper">
     <!-- ##### NEW HEADER ##### -->
-    <% if user_signed_in? %>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
 
@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div ng-app="myApp" id="page-content">
+      <div ng-app="myApp" id="page-content" style="margin-top: 5%">
         <%= yield %>
       </div>
     </div>
