@@ -57,7 +57,9 @@
 
         var markup = '' +
             '<div id=\"city\">' +
-                '<h4 id=\"city\">' + city + '</h4>' +
+                '<center>' +
+                '<p id=\"city\" style="font-size:30px margin-right:-170px">' + city + '</p>' +
+                '</center>' +
             '</div>' +
             '<div id= \"weather-icon\" class=\"pull-left\">' +
                 '<img id= \"weather-icon\" src="../assets/icons/' + icon + '.png" />' +
@@ -65,14 +67,11 @@
             '<div id= \"temperature\" class=\"pull-right\">' +
                 '<h1 class=\"temperatureInfo\">' + currentTemperature + '</h1>' +
             '</div>' +
-
-            '<div id= \"currcondition\" class=\"pull-left\">' +
-                '<h4 id=\"currcondition\">' + conditioncurrcondition + '</h4>' +
+            '<center>' +
+            '<div id= \"temps\">' +
+                '<p id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</p>' +
             '</div>' +
-
-            '<div id= \"temps\" class=\"pull-right\">' +
-                '<h4 id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</h4>' +
-            '</div>'
+            '</center>'
 
             ;
 
