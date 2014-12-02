@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+RSpotify.authenticate("b5e01e97cf87437ab7a977d4d326e5af", "6317b109f6f84ba58308cd41179ecc30")
+
 module HelloWorld
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
