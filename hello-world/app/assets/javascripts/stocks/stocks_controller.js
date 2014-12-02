@@ -4,6 +4,9 @@ angular.module('StockApp.controllers', [])
   stockAPIservice.getStocks().success(function (data) {
     $scope.StockList = data;
   })
+  $scope.set_sizey = function() {
+
+  }
   $scope.add = function() {
     $http( {method: 'post', url: "dashboard/stocks/add" , headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}, data: {symbol: $scope.text}})
     .success( function(data) {
@@ -15,7 +18,6 @@ angular.module('StockApp.controllers', [])
       console.log('Fail');
     });
   }
-
   $scope.remove = function() {
     $http( {method: 'delete', url: "dashboard/stocks/delete" , headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}, params: {symbol: $scope.text}})
     .success( function(data) {
@@ -27,13 +29,4 @@ angular.module('StockApp.controllers', [])
       console.log('Fail');
     });
   }
-})
-.directive('myDirective', function() {
-  return {
-    restrict: 'E',
-    scope: {
-      stockNum: '=info'
-    },
-    templateUrl: 'index.html.erb'
-  };
 });
