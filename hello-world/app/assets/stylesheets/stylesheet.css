@@ -643,3 +643,13 @@ footer #tzine-actions iframe{
     font-size: 20px;
 }
 
+.alert {
+    color: white;
+    background-color: #fbc97f;
+}
+
+/*.widget-content {
+    margin: 20px;
+}*/
+
+
