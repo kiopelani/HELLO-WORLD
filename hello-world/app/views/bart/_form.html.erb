@@ -1,7 +1,7 @@
-<form name="myform" action="/detailed_trip/plan" method="post">
+<form name="myform" action="/trip/plan" method="post">
   Where ya comin' from friend?
   <li>
-    <select name="trip[:origin]">
+    <select name="origin">
       <option value="12TH">12th St. Oakland City Center</option>
       <option value="16TH">16th St. Mission</option>
       <option value="19TH">19th St. Oakland</option>
@@ -50,7 +50,7 @@
   </li>
   Where ya headed sailor?
   <li>
-    <select name="trip[:destination]">
+    <select name="destination">
       <option value="12TH">12th St. Oakland City Center</option>
       <option value="16TH">16th St. Mission</option>
       <option value="19TH">19th St. Oakland</option>
@@ -99,8 +99,9 @@
   </li>
   What time do you need to be there?
   <li>
-    <input type="text" name="trip[:time]" placeholder="h:mm+am/pm">
+    <input type="text" name="time" placeholder="h:mm+am/pm">
   </li>
+</div>
 
   <input type="submit" value="submit">
 </form>
