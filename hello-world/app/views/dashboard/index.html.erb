@@ -61,8 +61,8 @@
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "football" %>
-            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="8" data-id="<%=widget.id %>" style="background-color: #2980b9">
-                <%= link_to '<button type="button"><i class="fa fa-trash-o"> FOOTBALL</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="6" data-id="<%=widget.id %>" style="background-color: #2980b9">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
         <% elsif widget.name == "clock" %>

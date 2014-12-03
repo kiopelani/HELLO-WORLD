@@ -20,8 +20,15 @@ Rails.application.routes.draw do
   get 'dashboard/football/endpoint' => 'football#endpoint'
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
   get 'dashboard/clock' => 'clock#index', as: 'clock'
+  get 'dashboard/gmail' => 'gmail#index'
 
   resources :widgets
+
+  # GmailAlerts::Application.routes.draw do
+  #   root to: 'sessions#new'
+  #   resources :sessions, only: :index
+  #   get "/auth/:provider/callback" => 'sessions#create'
+  # end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

@@ -47,6 +47,8 @@ end
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'google-api-client'
+gem 'json'
 
 gem "font-awesome-rails"
 

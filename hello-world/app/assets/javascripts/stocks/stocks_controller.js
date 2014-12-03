@@ -4,7 +4,7 @@ angular.module('StockApp.controllers', [])
   stockAPIservice.getStocks().success(function (data) {
     $scope.StockList = data;
     var count = $scope.StockList.length
-    if (count < 3) {
+    if (count < 2) {
       $('#stocky').parent().attr("data-sizey","2");
     } else if (count < 6 ) {
       $('#stocky').parent().attr("data-sizey","3");
