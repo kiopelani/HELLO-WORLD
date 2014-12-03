@@ -1,5 +1,33 @@
+
 <div class="gridster" id="user-widget-list">
-    <ul>
+<ul>
+    <% if @user.widgets.length == 0 %>
+        <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" style="text-align:center; padding: 10%" >
+        <h1>Add a Widget</h1>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+               <i class="fa fa-cloud fa-5x"></i>
+        </button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title text-black" id="myModalLabel">Hello!</h4>
+      </div>
+      <div class="modal-body text-black">
+        To add widgets, use the drop down menu in the sidebar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </li>
+    <% end %>
+
     <% @user.widgets.each do |widget| %>
         <% if widget.name == "weather" %>
             <li id="widget-box-weather" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #77DEFF">
