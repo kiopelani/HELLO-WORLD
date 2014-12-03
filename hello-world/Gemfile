@@ -47,6 +47,8 @@ end
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'google-api-client'
+gem 'json'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
