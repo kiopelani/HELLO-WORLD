@@ -28,8 +28,9 @@ $(document).ready(function() {
 
   function timesUp(){
     $('#alarm-div').addClass("pulse");
-    // $('#alarm-div').style(visibility:"block");
-
     $('#alarm-modal').modal('toggle')
+    var thissound = document.getElementById('bell');
+    thissound.play();
+  };
 
   };

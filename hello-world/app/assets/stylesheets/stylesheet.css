@@ -65,6 +65,12 @@ button {
     height: 90px;
 }
 
+#smiley-div img{
+    margin-top: -25px;
+    height: 100px;
+    width: 100px;
+}
+
 .foods {
     padding: 0 5% 5% 7%;
 }
@@ -706,6 +712,4 @@ footer #tzine-actions iframe{
 .start-button {
     margin-top: 5%;
 }
-
-/*moving cloud test*/
 
