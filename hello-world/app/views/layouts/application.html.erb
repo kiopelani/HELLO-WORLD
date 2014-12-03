@@ -34,6 +34,7 @@
             <li><%= link_to 'Basketball', widgets_path(:widget => {:name => "basketball"}), method: :post %></li>
             <li><%= link_to 'Football', widgets_path(:widget => {:name => "football"}), method: :post %></li>
             <li><%= link_to 'Clock', widgets_path(:widget => {:name => "clock"}), method: :post %></li>
+            <li><%= link_to 'Smiley', widgets_path(:widget => {:name => "smiley"}), method: :post %></li>
           </ul>
         </li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
@@ -60,7 +61,7 @@
               <center>
                 <h1>Alarm's Up!</h1>
                 <p>You'd better get a move on.</p>
-                <div id="alarm-player"></div>
+                <audio src="../../sounds/Zen-Temple-Bell.mp3" id="bell" autostart="false"></audio>
               </center>
             </div>
             <div class = "modal-footer">

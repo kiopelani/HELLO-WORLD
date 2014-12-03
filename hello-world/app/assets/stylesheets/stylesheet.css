@@ -18,7 +18,11 @@ a{
 }
 
 
-
+#smiley-div img{
+    margin-top: -25px;
+    height: 100px;
+    width: 100px;
+}
 /*-------------------------
     The clocks
 --------------------------*/

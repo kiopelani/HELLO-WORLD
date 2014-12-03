@@ -42,6 +42,13 @@
                 <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
+        <% elsif widget.name == "smiley" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="1" data-sizey="1" data-id="<%=widget.id %>" style="background-color: #f3f3f3">
+                <%= link_to '<button type="button">X</button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+                <div id="smiley-div">
+                <%= render "widgets/#{widget.name}" %>
+                </div>
+            </li>
 
         <% else %>
         <h1> <%= widget.name %> </h1>
