@@ -83,6 +83,8 @@
                 <%= link_to '<button type="button"><i class="fa fa-trash-o"> RECIPES</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}", locals: {video_link: @video_link} %>
             </li>
+        <% elsif widget.name == "bart" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" style="background-color:black"><%= link_to '<button type="button">X</button>'.html_safe, "/bart/form", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "bart/form" %></li>
 
         <% else %>
         <h1> <%= widget.name %> </h1>
@@ -90,7 +92,6 @@
         <% end %>
     <% end %>
 
-    <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" style="background-color:black"><%= link_to '<button type="button">X</button>'.html_safe, "/bart/form", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "bart/form" %></li>
 
 </ul>
 
