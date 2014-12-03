@@ -48,23 +48,25 @@ $(function() {
     function addWeather(icon, city, currentTemperature, tempMin, tempMax, conditioncurrcondition) {
 
         var markup = '' +
-            '<div id=\"city\">' +
-                '<h5 id=\"city\">' + city + '</h5>' +
-            '</div>' +
-            '<div id= \"weather-icon\" class=\"pull-left\">' +
+            // '<div id=\"city\">' +
+            //     '<div class="weather-city" id=\"city\">' + city + '</div>' +
+            // '</div>' +
+
+            '<div id= \"weather-icon\" class=\"pull-left weather-info\">' +
                 '<img id= \"weather-icon\" src="../assets/icons/' + icon + '.png" />' +
             '</div>' +
-            '<div id= \"temperature\" class=\"pull-right\">' +
+            '<div id= \"temperature\" class=\"pull-right weather-info\">' +
                 '<h1 class=\"temperatureInfo\">' + currentTemperature + '</h1>' +
-            '</div>' +
-
-            '<div id= \"currcondition\" class=\"pull-left\">' +
-                '<h5 id=\"currcondition\">' + conditioncurrcondition + '</h5>' +
-            '</div>' +
-
-            '<div id= \"temps\" class=\"pull-right\">' +
-                '<h5 id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</h5>' +
             '</div>'
+            // +
+
+            // '<div id= \"currcondition\" class=\"pull-left\">' +
+            //     '<span class="weather-text" id=\"currcondition\">' + conditioncurrcondition + '</span>' +
+            // '</div>' +
+
+            // '<div id= \"temps\" class=\"pull-right\">' +
+            //     '<span class="weather-text" id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</span>' +
+            // '</div>'
 
             ;
 
@@ -74,9 +76,7 @@ $(function() {
             'backgroundColor' : 'black',
             'backgroundImage': 'url("../assets/background-images/' + icon +'.jpg")',
             'backgroundRepeat': 'no-repeat',
-            'backgroundPosition': 'top center',
-            'backgroundSize': 'contain'
-
+            'backgroundSize': '100% 100%'
         });
     }
 
