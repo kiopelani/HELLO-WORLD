@@ -76,9 +76,7 @@ $(function() {
             'backgroundColor' : 'black',
             'backgroundImage': 'url("../assets/background-images/' + icon +'.jpg")',
             'backgroundRepeat': 'no-repeat',
-            'backgroundPosition': 'top center',
-            'backgroundSize': 'contain'
-
+            'backgroundSize': '100% 100%'
         });
     }
 

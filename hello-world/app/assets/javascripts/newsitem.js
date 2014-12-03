@@ -1,6 +1,6 @@
 function top_stories(o){
   var items = o.query.results.item;
-  var output = '<span class="news-title">News</span>';
+  var output = '';
   var no_items=items.length;
   for(var i=0;i<15;i++){
     var title = items[i].title;
