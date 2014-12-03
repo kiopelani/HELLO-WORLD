@@ -10,7 +10,6 @@ body {
     background-attachment: fixed;
     background-position: center;
   /*border: 30px solid black;*/
-
 }
 
 #page-content{
@@ -662,7 +661,12 @@ footer #tzine-actions iframe{
     margin-top: 5%;
     width: 100%;
     text-align: center;
+}
 
+.welcome-logo {
+    margin-top: 20%;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -682,19 +686,21 @@ footer #tzine-actions iframe{
 }
 
 .login-form a:link{
-    color: orange;
+    color: skyBlue;
 }
 
 .login-form a:visited{
-    color: orange;
+    color: skyBlue;
 }
 /*.login-title {
     font-size: 20px;
 }*/
 
 .alert {
-    color: white;
-    background-color: #fbc97f;
+    color: SkyBlue;
+    background-color: white;
+    margin-bottom: 0;
+    border: 1px solid white;
 }
 
 .weather-info {
@@ -708,8 +714,14 @@ footer #tzine-actions iframe{
     margin-bottom: 5px;
 }
 
-
 .start-button {
     margin-top: 5%;
 }
 
+.widget-padding {
+    padding-left: 10px;
+}
+
+#alarm-button {
+    color: black;
+}
