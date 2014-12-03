@@ -42,9 +42,9 @@ class WidgetsController < ApplicationController
     @user = current_user
     @widget = Widget.find(params[:id])
     if @answer.update_attributes(widget_params)
-      redirect_to root_path
+      redirect_to dashboard_path
     else
-      redirect_to root_path
+      redirect_to dashboard_path
     end
   end
 

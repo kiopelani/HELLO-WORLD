@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'dashboard#index'
+  root 'dashboard#welcome'
 
-  get 'dashboard' => 'dashboard#index'
-  # get 'hello-world' => 'dashboard#welcome'
+  get 'dashboard' => 'dashboard#index', as: 'dashboard'
+  get 'hello-world' => 'dashboard#welcome'
 
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/add' => 'stocks#add'

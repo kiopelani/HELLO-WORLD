@@ -1,7 +1,8 @@
-<div class="sign-up-form">
+<center><div class="logo">
+  <i class="fa fa-cloud fa-5x"> Sign Up</i>
+</div>
 
-<h2>Sign up</h2>
-
+<div class="login-form">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -10,7 +11,7 @@
     <span class="text-black"><%= f.email_field :email, autofocus: true %></span>
   </div>
 
-  <div class="field">
+  <div class="field" style="margin-top: 5px">
     <%= f.label :password %>
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -18,15 +19,16 @@
     <span class="text-black"><%= f.password_field :password, autocomplete: "off" %></span>
   </div>
 
-  <div class="field">
+  <div class="field" style="margin-top: 5px">
     <%= f.label :password_confirmation %><br />
     <span class="text-black"><%= f.password_field :password_confirmation, autocomplete: "off" %></span>
   </div>
 
-  <div class="actions text-black">
+  <div class="actions" style="margin-top: 5px">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
 </div>
+</center>
