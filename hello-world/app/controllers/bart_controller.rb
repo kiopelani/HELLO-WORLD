@@ -16,7 +16,7 @@ class BartController < ApplicationController
     @destination = params.values[1]
     @time = params.values[2]
     p 'I AM ALIVE' * 500
-    render 'test'
+    render 'trip_info'
   end
 
   private
