@@ -8,9 +8,11 @@ class BartController < ApplicationController
   end
 
   def create
+    p 'I AM HERE' * 500
     @origin = params[:trip].values[0]
     @destination = params[:trip].values[1]
     @time = params[:trip].values[2]
+    p 'I AM ALIVE' * 500
     render 'test'
   end
 
