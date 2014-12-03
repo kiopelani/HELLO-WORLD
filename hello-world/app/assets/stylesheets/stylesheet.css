@@ -28,6 +28,19 @@ button {
 }
 
 /*-------------------------
+    The recipes
+--------------------------*/
+.foods img {
+    padding: 10px;
+    width: 97px;
+    height: 97px;
+}
+
+.foods {
+    padding: 5px;
+}
+
+/*-------------------------
     The clocks
 --------------------------*/
 
