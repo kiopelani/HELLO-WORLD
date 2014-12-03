@@ -1,5 +1,6 @@
 class BartController < ApplicationController
-  protect_from_forgery
+  protect_from_forgery except: :sign_in
+  # protect_from_forgery
   def index
   end
 
