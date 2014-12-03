@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
   get 'dashboard/clock' => 'clock#index', as: 'clock'
   get 'dashboard/gmail' => 'gmail#index'
+  get 'dashboard/joke' => 'joke#index'
+  get 'dashboard/quote' => 'quote#index'
+  get 'dashboard/wotd' => 'wotd#index'
+  get 'dashboard/urbanwotd' => 'urbanwotd#index'
 
   resources :widgets
 
