@@ -1,26 +1,26 @@
 <table ng-controller="footballAppCtrl">
   <thead>
-    NFL Scores - Week 13
-    <tr style="size:8px">
+    <div style="font-size: 20px; text-align: center;">NFL Scores - Week 13</div>
+    <tr>
       <th></th>
-      <th>Home Team</th>
-      <th>Score</th>
-      <th>Score</th>
-      <th>Away Team</th>
+      <th>Home</th>
+      <th></th>
+      <th></th>
+      <th>Away</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr style="size:8px" ng-repeat="game in GameList">
+    <tr ng-repeat="game in GameList">
       <td>
-        <img style="width: 20px" ng-src="{{game.home_gif}}" />
+        <img style="width: 25px" ng-src="{{game.home_gif}}" />
       </td>
-      <td>{{game.home_team}}</td>
-      <td>{{game.home_score}}</td>
-      <td>{{game.away_score}}</td>
-      <td>{{game.away_team}}</td>
+      <td style="font-size: 14px">{{game.home_team}}</td>
+      <td style="font-size: 14px">{{game.home_score}}</td>
+      <td style="font-size: 14px">{{game.away_score}}</td>
+      <td style="font-size: 14px">{{game.away_team}}</td>
       <td>
-        <img style="width: 20px" ng-src="{{game.away_gif}}" />
+        <img style="width: 25px" ng-src="{{game.away_gif}}" />
       </td>
     </tr>
   </tbody>

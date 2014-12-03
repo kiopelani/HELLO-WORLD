@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,11 +8,8 @@ Rails.application.routes.draw do
   root 'dashboard#index'
 
   get 'dashboard' => 'dashboard#index'
+  # get 'hello-world' => 'dashboard#welcome'
 
-  get 'dashboard/music' => 'music#index', as: 'music'
-  get 'dashboard/newsitem' => 'newsitem#index'
-  get 'dashboard/weather' => 'weather#index'
-  get 'dashboard/alarm' => 'alarm#index'
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/add' => 'stocks#add'
   delete 'dashboard/stocks/delete' => 'stocks#destroy'
@@ -23,11 +20,15 @@ Rails.application.routes.draw do
   get 'dashboard/football/endpoint' => 'football#endpoint'
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
   get 'dashboard/clock' => 'clock#index', as: 'clock'
-
-  get '/auth/spotify/callback', to: 'music#spotify'
-
+  get 'dashboard/gmail' => 'gmail#index'
 
   resources :widgets
+
+  # GmailAlerts::Application.routes.draw do
+  #   root to: 'sessions#new'
+  #   resources :sessions, only: :index
+  #   get "/auth/:provider/callback" => 'sessions#create'
+  # end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
