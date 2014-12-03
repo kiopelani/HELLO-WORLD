@@ -48,23 +48,25 @@ $(function() {
     function addWeather(icon, city, currentTemperature, tempMin, tempMax, conditioncurrcondition) {
 
         var markup = '' +
-            '<div id=\"city\">' +
-                '<div class="weather-city" id=\"city\">' + city + '</div>' +
-            '</div>' +
-            '<div id= \"weather-icon\" class=\"pull-left\">' +
+            // '<div id=\"city\">' +
+            //     '<div class="weather-city" id=\"city\">' + city + '</div>' +
+            // '</div>' +
+
+            '<div id= \"weather-icon\" class=\"pull-left weather-info\">' +
                 '<img id= \"weather-icon\" src="../assets/icons/' + icon + '.png" />' +
             '</div>' +
-            '<div id= \"temperature\" class=\"pull-right\">' +
+            '<div id= \"temperature\" class=\"pull-right weather-info\">' +
                 '<h1 class=\"temperatureInfo\">' + currentTemperature + '</h1>' +
-            '</div>' +
-
-            '<div id= \"currcondition\" class=\"pull-left\">' +
-                '<span class="weather-text" id=\"currcondition\">' + conditioncurrcondition + '</span>' +
-            '</div>' +
-
-            '<div id= \"temps\" class=\"pull-right\">' +
-                '<span class="weather-text" id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</span>' +
             '</div>'
+            // +
+
+            // '<div id= \"currcondition\" class=\"pull-left\">' +
+            //     '<span class="weather-text" id=\"currcondition\">' + conditioncurrcondition + '</span>' +
+            // '</div>' +
+
+            // '<div id= \"temps\" class=\"pull-right\">' +
+            //     '<span class="weather-text" id=\"temps\">' + "Low: " + tempMin + '|High: ' + tempMax + '</span>' +
+            // '</div>'
 
             ;
 
