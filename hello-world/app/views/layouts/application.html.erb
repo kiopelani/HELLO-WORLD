@@ -34,6 +34,7 @@
             <li><%= link_to 'Basketball', widgets_path(:widget => {:name => "basketball"}), method: :post %></li>
             <li><%= link_to 'Football', widgets_path(:widget => {:name => "football"}), method: :post %></li>
             <li><%= link_to 'Clock', widgets_path(:widget => {:name => "clock"}), method: :post %></li>
+            <li><%= link_to 'Smiley', widgets_path(:widget => {:name => "smiley"}), method: :post %></li>
             <li><%= link_to 'Cute Animals', widgets_path(:widget => {:name => "video"}), method: :post %></li>
             <li><%= link_to 'Recipes', widgets_path(:widget => {:name => "recipe"}), method: :post %></li>
             <li><%= link_to 'Word of the Day', widgets_path(:widget => {:name => "wotd"}), method: :post %></li>
@@ -61,14 +62,13 @@
       <div class = "modal fade" id = "alarm-modal" role = "dialog">
         <div class = "modal-dialog">
           <div class = "modal-content">
-            <div clas = "modal-header">
-              <h4> AHHHHH </h4>
-            </div>
-            asdasdasdasdasd
             <div class = "modal-body">
-              <p>WAKE UP SLEEPY HEAD!!!</p>
+              <center>
+                <h1>Alarm's Up!</h1>
+                <p>You'd better get a move on.</p>
+                <audio src="../assets/Zen-Temple-Bell.mp3" id="bell" autostart="false"></audio>
+              </center>
             </div>
-            aaaaaaaaa
             <div class = "modal-footer">
               <a class = "btn btn-primary" data-dismiss="modal">Close</a>
             </div>
