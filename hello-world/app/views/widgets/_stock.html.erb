@@ -1,19 +1,18 @@
 <div id="stocky" ng-controller="stockAppCtrl">
   <table>
+    <div style="font-size: 20px; text-align: center;">Stocks - <%= Time.now.strftime("%B %d, %Y - %H:%M:%S") %></div>
     <thead>
       <tr>
         <th>Symbol</th>
         <th>Name</th>
-        <th>Current Price</th>
-        <th>Mkt Cap</th>
+        <th>Price</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="stock in StockList">
-        <td>{{stock.symbol}}</td>
-        <td>{{stock.name}}</td>
-        <td>{{stock.last_trade_price_only | currency}}</td>
-        <td>${{stock.market_capitalization}}</td>
+        <td style="font-size: 14px">{{stock.symbol}}</td>
+        <td style="font-size: 14px">{{stock.name}}</td>
+        <td style="font-size: 14px">{{stock.last_trade_price_only | currency}}</td>
       </tr>
     </tbody>
   </table>

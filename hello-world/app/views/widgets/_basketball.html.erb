@@ -1,26 +1,26 @@
 <table id="basketbally" ng-controller="basketballAppCtrl">
-  <thead>
-    NBA Scores - <%= Date.yesterday %>
-    <tr style="size:8px">
+  <thead >
+    <div style="font-size: 20px; text-align: center;">NBA Scores - <%= Time.now.strftime("%B %d, %Y") %></div>
+    <tr>
       <th></th>
-      <th>Home Team</th>
-      <th>Score</th>
-      <th>Score</th>
-      <th>Away Team</th>
+      <th>Home</th>
+      <th></th>
+      <th></th>
+      <th>Away</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr style="size:8px" ng-repeat="game in GameList">
+    <tr ng-repeat="game in GameList">
       <td>
-        <img style="width: 25px" ng-src="{{game.home_gif}}" />
+        <img style="width: 30px" ng-src="{{game.home_gif}}" />
       </td>
-      <td>{{game.home_team}}</td>
-      <td>{{game.home_score}}</td>
-      <td>{{game.away_score}}</td>
-      <td>{{game.away_team}}</td>
+      <td style="font-size: 14px">{{game.home_team}}</td>
+      <td style="font-size: 14px">{{game.home_score}}</td>
+      <td style="font-size: 14px">{{game.away_score}}</td>
+      <td style="font-size: 14px">{{game.away_team}}</td>
       <td>
-        <img style="width: 25px" ng-src="{{game.away_gif}}" />
+        <img style="width: 30px" ng-src="{{game.away_gif}}" />
       </td>
     </tr>
   </tbody>

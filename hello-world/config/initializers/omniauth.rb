@@ -1,3 +1,10 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :spotify, "b5e01e97cf87437ab7a977d4d326e5af", "6317b109f6f84ba58308cd41179ecc30", scope: 'user-read-email playlist-modify-public user-library-read user-library-modify'
+  provider :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"],
+    {
+      :name => "google",
+      :scope => "email, profile, plus.me, http://gdata.youtube.com",
+      :prompt => "select_account",
+      :image_aspect_ratio => "square",
+      :image_size => 50
+    }
 end

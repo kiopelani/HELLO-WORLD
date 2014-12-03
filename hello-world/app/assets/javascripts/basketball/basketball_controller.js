@@ -4,14 +4,16 @@ angular.module('BasketballApp.controllers', [])
   basketballAPIservice.getGames().success(function (data) {
     $scope.GameList = data;
     var count = $scope.GameList.length
-    if (count < 3) {
+    if (count < 1) {
       $('#basketbally').parent().attr("data-sizey","1");
-    } else if (count < 7 ) {
+    } else if (count < 5 ) {
       $('#basketbally').parent().attr("data-sizey","2");
-    } else if (count < 13 ) {
+    } else if (count < 9 ) {
       $('#basketbally').parent().attr("data-sizey","3");
-    } else {
+    } else if (count < 14 ) {
       $('#basketbally').parent().attr("data-sizey","4");
+    } else {
+      $('#basketbally').parent().attr("data-sizey","5");
     }
   })
 });
