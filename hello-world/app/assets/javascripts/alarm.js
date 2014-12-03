@@ -32,5 +32,3 @@ $(document).ready(function() {
     var thissound = document.getElementById('bell');
     thissound.play();
   };
-
-  };
