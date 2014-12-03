@@ -4,5 +4,6 @@
   <% @recipe["recipes"].first(9).each do |recipe| %>
     <%= link_to(image_tag(recipe["image_url"]), recipe["f2f_url"])%>
   <% end %>
+  <%= link_to 'Powered By Food2Fork.com' ,'http://Food2Fork.com' %>
 </div>
 
