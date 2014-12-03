@@ -1,3 +1,5 @@
-<% response = HTTParty.get("http://api.icndb.com/jokes/random") %>
-<h3>Chuck Norris Joke: </h3>
-<div><%= response["value"]["joke"] %></div>
+<div class="widget-padding">
+  <% response = HTTParty.get("http://api.icndb.com/jokes/random") %>
+  <h3>Chuck Norris Joke: </h3>
+  <div><%= response["value"]["joke"] %></div>
+</div>
