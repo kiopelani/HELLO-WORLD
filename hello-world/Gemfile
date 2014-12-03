@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use SCSS for stylesheets
@@ -51,7 +51,6 @@ gem 'json'
 
 gem "font-awesome-rails"
 
-gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
