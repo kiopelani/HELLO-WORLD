@@ -69,6 +69,8 @@ GEM
       retriable (>= 1.4)
       signet (>= 0.5.0)
       uuidtools (>= 2.1.0)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     hashie (3.3.2)
     hike (1.2.3)
     httparty (0.13.3)
@@ -200,6 +202,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   google-api-client
+  font-awesome-rails
   httparty
   jbuilder (~> 2.0)
   jquery-rails

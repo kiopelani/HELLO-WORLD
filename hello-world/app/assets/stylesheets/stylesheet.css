@@ -28,6 +28,45 @@ button {
 }
 
 /*-------------------------
+    The news
+--------------------------*/
+
+#results {
+    width: 100%;
+    padding: 10px;
+    height: 90%;
+    overflow: auto;
+}
+
+#results h3 {
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+}
+
+#results h3 a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+#results h3 a:visited {
+    text-decoration: none;
+    color: gray;
+}
+
+/*-------------------------
+    The recipes
+--------------------------*/
+.foods img {
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+}
+
+.foods {
+    padding: 0 5% 5% 7%;
+}
+
+/*-------------------------
     The clocks
 --------------------------*/
 
@@ -338,7 +377,7 @@ button {
     position:absolute;
     bottom:20px;
     right:1px;
-    font-size:12px;
+    font-size:50px;
 }
 
 
@@ -612,11 +651,8 @@ footer #tzine-actions iframe{
 
 .logo {
     margin-top: 15%;
-    border: 10px solid white;
     text-align: center;
-    background-color: orange;
-/*    background-image: url('http://images.all-free-download.com/images/graphiclarge/sunrise_cartoon_background_01_vector_157946.jpg');
-*/
+
 }
 
 .site-title {
@@ -626,10 +662,10 @@ footer #tzine-actions iframe{
 .login-form {
     background-color: white;
     color: black;
-    width: 25%;
+    width: 40%;
     padding: 2%;
-    margin-top: 2%;
-    margin-left: 37%;
+    margin-top: 4%;
+    margin-left: 30%;
 }
 
 .login-form a:link{
@@ -648,13 +684,15 @@ footer #tzine-actions iframe{
     background-color: #fbc97f;
 }
 
-.weather-text {
-    font-size: 9px;
+.weather-info {
+    margin-top: 30px;
 }
 
 .weather-city {
+    color: skyBlue;
     font-size: 14px;
     margin-left: 15px;
     margin-bottom: 5px;
 }
+
 
