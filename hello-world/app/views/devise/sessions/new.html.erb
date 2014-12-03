@@ -1,26 +1,34 @@
-<h2>Log in</h2>
+<div class="logo">
+  <div class="site-title">Hello <img src="http://static.rasset.ie/static/news/img/weather/icons/clear-weather-sun.png" width="200px"> World</div>
+</div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <span class="text-black"><%= f.email_field :email, autofocus: true %></span>
-  </div>
+<div class="login-form">
+  <div class="login-title">Log in</div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <span class="text-black"><%= f.password_field :password, autocomplete: "off" %></span>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :email %><br />
+      <span class="text-black"><%= f.email_field :email, autofocus: true %></span>
     </div>
-  <% end -%>
 
-  <div class="actions text-black">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :password %><br />
+      <span class="text-black"><%= f.password_field :password, autocomplete: "off" %></span>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions text-black">
+      <%= f.submit "Log in" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
+
+<!--   <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %> -->

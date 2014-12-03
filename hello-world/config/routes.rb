@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,11 +8,8 @@ Rails.application.routes.draw do
   root 'dashboard#index'
 
   get 'dashboard' => 'dashboard#index'
+  # get 'hello-world' => 'dashboard#welcome'
 
-  get 'dashboard/music' => 'music#index', as: 'music'
-  get 'dashboard/newsitem' => 'newsitem#index'
-  get 'dashboard/weather' => 'weather#index'
-  get 'dashboard/alarm' => 'alarm#index'
   get 'dashboard/stocks' => 'stocks#index'
   post 'dashboard/stocks/add' => 'stocks#add'
   delete 'dashboard/stocks/delete' => 'stocks#destroy'
@@ -23,8 +20,6 @@ Rails.application.routes.draw do
   get 'dashboard/football/endpoint' => 'football#endpoint'
   get 'dashboard/add_widgets' => 'dashboard#add_widgets', as: 'add_widgets'
   get 'dashboard/clock' => 'clock#index', as: 'clock'
-
-  get '/auth/spotify/callback', to: 'music#spotify'
 
   resources :widgets
 
