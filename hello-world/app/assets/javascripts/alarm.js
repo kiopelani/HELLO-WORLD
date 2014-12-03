@@ -29,4 +29,8 @@ $(document).ready(function() {
   function timesUp(){
     $('#alarm-div').addClass("pulse");
     $('#alarm-modal').modal('toggle')
+    $('#alarm-modal').innerHTML("<audio autoplay>" +
+      "<source src='../sounds/Zen-Temple-Bell.mp3'>"+
+      "</audio>" )
+
   };
