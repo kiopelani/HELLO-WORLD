@@ -77,6 +77,21 @@
                 <%= link_to '<button type="button"><i class="fa fa-trash-o"> RECIPES</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}", locals: {video_link: @video_link} %>
             </li>
+        <% elsif widget.name == "wotd" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: black">
+                <%= link_to '<button type="button"><i class="fa fa-trash-o"> Word of the Day</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "urbanwotd" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: black">
+                <%= link_to '<button type="button"><i class="fa fa-trash-o"> Urban WotD</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
+        <% elsif widget.name == "joke" %>
+            <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: black">
+                <%= link_to '<button type="button"><i class="fa fa-trash-o"> JOKE</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
+                <%= render "widgets/#{widget.name}" %>
+            </li>
 
         <% else %>
         <h1> <%= widget.name %> </h1>

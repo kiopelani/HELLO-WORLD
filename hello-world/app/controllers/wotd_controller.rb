@@ -9,6 +9,5 @@ class WotdController < ApplicationController
     @wotd = {}
     @wotd[:word] = page.css(".wotd").text
     @wotd[:def] = page.css(".wotd_txt").text
-    pp @wotd
   end
 end

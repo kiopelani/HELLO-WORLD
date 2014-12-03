@@ -1,4 +1,5 @@
 <h3>Word of the Day</h3>
+<% page = Nokogiri::HTML(RestClient.get("http://dictionary.reference.com/")) %>
 <h5><%= Time.now.strftime("%B %d, %Y") %></h5>
-<div>Word: <%= @wotd[:word] %></div>
-<div>Definition: <%= @wotd[:def] %></div>
+<div>Word: <%= page.css(".wotd").text.capitalize %></div>
+<div>Definition: <%= page.css(".wotd_txt").text.capitalize %></div>

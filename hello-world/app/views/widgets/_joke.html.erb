@@ -1,3 +1,3 @@
-<div>
-  <%= @joke %>
-</div>
+<% response = HTTParty.get("http://api.icndb.com/jokes/random") %>
+<h3>Chuck Norris Joke: </h3>
+<div><%= response["value"]["joke"] %></div>
