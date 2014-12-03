@@ -653,22 +653,26 @@ footer #tzine-actions iframe{
 }
 
 .logo {
-    margin-top: 15%;
+    margin-top: 5%;
+    width: 100%;
     text-align: center;
 
 }
+
 
 .site-title {
     font-size: 100px;
 }
 
+
 .login-form {
     background-color: white;
     color: black;
-    width: 40%;
-    padding: 2%;
-    margin-top: 4%;
-    margin-left: 30%;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 5%;
+  /*  margin-left: 30%;*/
 }
 
 .login-form a:link{
@@ -678,9 +682,9 @@ footer #tzine-actions iframe{
 .login-form a:visited{
     color: orange;
 }
-.login-title {
+/*.login-title {
     font-size: 20px;
-}
+}*/
 
 .alert {
     color: white;
@@ -699,3 +703,6 @@ footer #tzine-actions iframe{
 }
 
 
+.start-button {
+    margin-top: 5%;
+}

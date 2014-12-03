@@ -1,10 +1,10 @@
-<div class="logo">
-  <div class="site-title">Hello <img src="http://static.rasset.ie/static/news/img/weather/icons/clear-weather-sun.png" width="200px"> World</div>
+<center><div class="logo">
+  <i class="fa fa-cloud fa-5x"> Login</i>
 </div>
 
 <div class="login-form">
-  <div class="login-title">Log in</div>
-
+<!--   <div class="login-title">Log in</div>
+ -->
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -27,8 +27,9 @@
       <%= f.submit "Log in" %>
     </div>
   <% end %>
-
+<br />
   <%= render "devise/shared/links" %>
 </div>
 
 <!--   <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %> -->
+</center>
