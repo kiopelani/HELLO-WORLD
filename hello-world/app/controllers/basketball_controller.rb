@@ -51,14 +51,7 @@ class BasketballController < ApplicationController
       })
       counter += 1
     end
-    game = Game.new({ "home_team"  => home_teams[1],
-                              "away_team"  => away_teams[1],
-                              "home_score" => home_scores[1],
-                              "away_score" => away_scores[2],
-                              "home_gif"   => home_team_gifs[2],
-                              "away_gif"   => away_team_gifs[2]
-      })
-    games_arr = [game, game, game, game, game, game, game, game, game, game, game, game, game, game]
+    games_arr.pop while games_arr.count > 7
     render json: games_arr
   end
 end
