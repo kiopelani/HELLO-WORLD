@@ -11,7 +11,7 @@ class BartController < ApplicationController
     @origin = params[:trip].values[0]
     @destination = params[:trip].values[1]
     @time = params[:trip].values[2]
-    erb :_your_trip
+    render 'test'
   end
 
   private
