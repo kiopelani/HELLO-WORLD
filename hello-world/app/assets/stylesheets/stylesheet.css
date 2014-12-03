@@ -1,7 +1,7 @@
 body {
 
   /*background-image: url("../assets/background-images/01d.jpg");*/
-  background-image: url("http://adityamehta.in/wp-content/uploads/2014/08/Sky-Blue-Sky.jpg");
+  /*background-image: url("http://adityamehta.in/wp-content/uploads/2014/08/Sky-Blue-Sky.jpg");*/
   min-height: 100%;
   min-width: 100%;
   background-position: center center;
@@ -725,6 +725,3 @@ footer #tzine-actions iframe{
 #alarm-button {
     color: black;
 }
-
-
-
