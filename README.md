@@ -1,38 +1,34 @@
-#HELLO, WORLD!
+#HELLO WORLD
 
-##User Stories:
-- As a user I want to log in/log out. (OAUTH?)
-- As a user I have a dashboard that displays selected widgets.
-- As a user I can later add/remove widgets to my dashboard.
-- As a user I edit my widget's specifications.
+HELLO WORLD is a morning dashboard application that gives you the content you ACTUALLY care about seeing in the morning.
 
-##Widgets I'd like to choose from include:
-- Weather widget.
-- News widget.
-- Transit time widget.
-- Soundcloud widget.
-- Simple game widget.
-- Email notification widget.
-- Todo list widget.
-- Facebook & Twitter notification widgets.
-- Alarm widget (potentially with Twillio and game- element Integration).
-- ESPN widget.
+To start your morning off the right way, create an account at [helloworld.com](http://helloworldftw.herokuapp.com/) or login with gmail to start building your own dashboard with our custom HELLO WORLD widgets.
 
-##Technologies to spike on:
-- Angular.
-- React(?).
-- The million APIs we're going to be using for our widgets.
+##Widgets
+Hello World currently has 16 widgets.
 
-##Things that are sexy:
-- Drag and Drop.
-- SPA (single page app).
-- Animations.
+* **Clock**: Displays the current time
+* **Weather**: Displays the current temperature for your location (from [OpenWeatherMap](http://openweathermap.org/api))
+* **News**: Displays the top news headlines (from [Yahoo News](http://news.yahoo.com/))
+* **Stocks**: Displays the current price of your favorite stocks (from [Yahoo Finance](http://finance.yahoo.com/q?s=API))
+* **Music**: Displays the most popular songs on [Spotify](https://www.spotify.com/us/) (must have Spotify account to play them)
+* **Alarm**: Allows you to set an alarm in your browser
+* **Basketball**: Displays scores from yesterday's games (from [NBA.com](http://www.nba.com/))
+* **Football**: Displays scores from last week's game (from [CBSsports.com](http://www.cbssports.com/))
+* **Smiley**: Displays a smiley face to brighten your day (or use as a space filler)
+* **Cute Animals**: Displays a random cute animal video (from [YouTube](https://www.youtube.com/))
+* **Recipes**: Displays 9 random recipes from [FOOD2FORK](http://food2fork.com/)
+* **Word of the Day**: Displays a word of the day (from [Dictionary.com](http://dictionary.reference.com/))
+* **Urban Word of the Day**: Displays an urban word of the day (from [UrbanDictionary.com](http://www.urbandictionary.com/))
+* **Joke**: Displays a Chuck Norris joke (from [icndb.com](http://www.icndb.com/))
+* **SmartBart**: Helps you plan a BART trip (through [SF MUNI](http://www.sfmta.com/))
+* **Tswift**: Displays the most popular Taylor Swift video on YouTube
 
-##Stretch functionality:
-- Chrome Extension.
-- Chatroom between users. (Through FB messenger?)
 
-##Technologies Used:
-- Rails.
-- Bootstrap.
-- Moment.js.
+#Technologies Used
+
+* [Ruby on Rails](http://rubyonrails.org/)
+* [Angular.js](https://angularjs.org/)
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Gridster.js](http://gridster.net/)
+* [Moment.js](http://momentjs.com/)

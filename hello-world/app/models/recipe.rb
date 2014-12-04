@@ -8,5 +8,4 @@ class Recipe < ActiveRecord::Base
     body = JSON.parse(@response.body)
   end
 
-
 end
