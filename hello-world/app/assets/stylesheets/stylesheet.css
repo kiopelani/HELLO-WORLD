@@ -24,6 +24,12 @@ button {
     border: none;
 }
 
+.food_search {
+    margin: 10px;
+    text-align: center;
+}
+
+
 /*-------------------------
     The news
 --------------------------*/

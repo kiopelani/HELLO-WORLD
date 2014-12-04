@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'dashboard/clock' => 'clock#index', as: 'clock'
   get 'dashboard/gmail' => 'gmail#index'
   get 'dashboard/joke' => 'joke#index'
+  post 'dashboard' => 'recipe#search'
 
   resources :widgets
 
