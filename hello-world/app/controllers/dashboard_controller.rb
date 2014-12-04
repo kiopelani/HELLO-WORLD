@@ -12,4 +12,10 @@ class DashboardController < ApplicationController
       render :welcome
     end
   end
+
+  def destroy_all
+    @user = current_user
+    @user.widgets.destroy_all
+    redirect_to dashboard_path
+  end
 end

@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'dashboard/clock' => 'clock#index', as: 'clock'
   get 'dashboard/gmail' => 'gmail#index'
   get 'dashboard/joke' => 'joke#index'
+  delete '/users/:user_id/widgets' => 'dashboard#destroy_all'
 
   resources :bart
 

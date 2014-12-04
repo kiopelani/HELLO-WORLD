@@ -118,8 +118,6 @@
 
 
 
-
-
 <script>
     $('.gridster ul').gridster({
         widget_margins: [5,5], //10px margins
@@ -130,6 +128,7 @@
 
 <center>
      <a href="#menu-toggle" class="btn btn-primary btn-lg" id="menu-toggle">Toggle Menu</a>
+     <%= link_to '<button type="button" class="btn btn-danger btn-lg">Delete All Widgets</button>'.html_safe, "/users/#{@user.id}/widgets", method: :delete, data: {confirm: 'Fosho?'} %>
 </center>
 
    <script>
