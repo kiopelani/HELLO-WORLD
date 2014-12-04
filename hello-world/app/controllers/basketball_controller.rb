@@ -14,7 +14,8 @@ class BasketballController < ApplicationController
     home_team_gifs = []
 
     yest_string = "#{Date.yesterday.year}#{Date.yesterday.month}0#{Date.yesterday.day}"
-    page = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/#{yest_string}/"))
+    # page = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/#{yest_string}/"))
+    page = Nokogiri::HTML(RestClient.get("http://www.nba.com/gameline/20141204/"))
     scores = page.css('div.nbaModTopTeamNum')
     scores.each do |score|
       all_scores << score.text.to_i
