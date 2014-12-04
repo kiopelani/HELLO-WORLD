@@ -82,6 +82,11 @@
                 <%= link_to '<button type="button"><i class="fa fa-trash-o"> RECIPES</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}", locals: {video_link: @video_link} %>
             </li>
+
+        <% elsif widget.name == "bart" %>
+
+            <li id="bart-box" data-col="1" data-row="1" data-sizex="3" data-sizey="4" style="background-color:black"><%= link_to '<button type="button">X</button>'.html_safe, "/bart/form", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "bart/form" %>  <br><center><div id="bart-box-box">Submit your search to plan your trip!</div></center></li>
+
         <% elsif widget.name == "wotd" %>
             <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #5B8890">
                 <%= link_to '<button type="button"><i class="fa fa-trash-o"> Word of the Day</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
@@ -97,7 +102,6 @@
                 <%= link_to '<button type="button"><i class="fa fa-trash-o"> JOKE</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
                 <%= render "widgets/#{widget.name}" %>
             </li>
-
         <% elsif widget.name == "tswift" %>
             <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>" style="background-color: #001013">
                 <%= link_to '<button type="button"><i class="fa fa-trash-o"> TSWIFT</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>
@@ -108,7 +112,12 @@
         <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="3" data-id="<%=widget.id %>"><%= link_to '<button type="button"><i class="fa fa-trash-o"></i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "widgets/#{widget.name}" %></li>
         <% end %>
     <% end %>
+
+
 </ul>
+
+
+
 
 
 <script>

@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get 'dashboard/gmail' => 'gmail#index'
   get 'dashboard/joke' => 'joke#index'
 
+  resources :bart
+
   resources :widgets
 
   # GmailAlerts::Application.routes.draw do
