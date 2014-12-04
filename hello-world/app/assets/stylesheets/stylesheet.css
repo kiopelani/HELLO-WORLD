@@ -5,9 +5,8 @@ body {
   background-position: center center;
   margin-bottom: 60px;
   background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  /*border: 30px solid black;*/
+  background-attachment: fixed;
+  background-position: center;
 }
 
 #page-content{
@@ -728,4 +727,16 @@ footer #tzine-actions iframe{
 
 #alarm-button {
     color: black;
+}
+
+#widget-box:hover {
+    box-shadow: 4px 4px 2px black;
+}
+
+#widget-box-weather:hover {
+    box-shadow: 4px 4px 2px black;
+}
+
+#bart-box:hover {
+    box-shadow: 4px 4px 2px black;
 }
