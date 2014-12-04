@@ -728,3 +728,15 @@ footer #tzine-actions iframe{
 #alarm-button {
     color: black;
 }
+
+#widget-box:hover {
+    box-shadow: 4px 4px 2px black;
+}
+
+#widget-box-weather:hover {
+    box-shadow: 4px 4px 2px black;
+}
+
+#bart-box:hover {
+    box-shadow: 4px 4px 2px black;
+}
