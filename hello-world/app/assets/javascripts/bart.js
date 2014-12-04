@@ -1,8 +1,6 @@
 $(document).ready(function(){
-
   $("#bart-form").on('submit', function(e){
     e.preventDefault();
-
     bartAjaxRequest = $.ajax({
       url: "/bart",
       type: "post",
