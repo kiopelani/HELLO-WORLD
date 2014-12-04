@@ -9,15 +9,6 @@ body {
   background-position: center;
 }
 
-#bart-header{
-    margin-left: 20px;
-    font-size: 30px;
-}
-
-#bart-box-box{
-    font-size: 14px;
-}
-
 #page-content{
       color: white;
 }
@@ -26,12 +17,17 @@ a{
     color: white;
 }
 
-
 button {
     opacity: 0.4;
     background-color: transparent;
     border: none;
 }
+
+.food_search {
+    margin: 10px;
+    text-align: center;
+}
+
 
 /*-------------------------
     The news
@@ -732,16 +728,3 @@ footer #tzine-actions iframe{
 #alarm-button {
     color: black;
 }
-
-#widget-box:hover {
-    box-shadow: 4px 4px 2px black;
-}
-
-#widget-box-weather:hover {
-    box-shadow: 4px 4px 2px black;
-}
-
-#bart-box:hover {
-    box-shadow: 4px 4px 2px black;
-}
-
