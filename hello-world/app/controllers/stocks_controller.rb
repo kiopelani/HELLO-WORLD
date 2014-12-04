@@ -13,11 +13,8 @@ class StocksController < ApplicationController
       @stocks << StockQuote::Stock.quote(symbol, nil, nil,
         [ "Symbol",
           "Name",
-          "DaysHigh",
-          "DaysLow",
-          "LastTradePriceOnly",
-          "MarketCapitalization",
-          "Volume"] )
+          "LastTradePriceOnly"
+        ] )
     end
   end
   def add
