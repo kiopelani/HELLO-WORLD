@@ -1,7 +1,7 @@
 <% if @user.widgets.length == 0 %>
 <center>
     <h1>Add a Widget</h1>
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-cloud fa-5x"></i></button>
+    <div data-toggle="modal" data-target="#myModal"><i class="fa fa-cloud fa-5x"></i></div>
 </center>
 
 <!-- Modal -->
@@ -128,7 +128,7 @@
 
 <center>
      <a href="#menu-toggle" class="btn btn-primary btn-lg" id="menu-toggle">Toggle Menu</a>
-     <%= link_to '<button type="button" class="btn btn-danger btn-lg">Delete All Widgets</button>'.html_safe, "/users/#{@user.id}/widgets", method: :delete, data: {confirm: 'Fosho?'} %>
+     <%= link_to '<span class="btn btn-danger btn-lg">Delete All Widgets</span>'.html_safe, "/users/#{@user.id}/widgets", method: :delete, data: {confirm: 'Fosho?'} %>
 </center>
 
    <script>
