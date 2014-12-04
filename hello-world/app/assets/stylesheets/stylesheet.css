@@ -9,6 +9,16 @@ body {
   background-position: center;
 }
 
+video#bgvid {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url("http://av.vimeo.com/89594/536/52926309.mp4?token2=1417735913_24b4d77a5d3a70750410d67593f5a09c&aksessionid=fd004f741dd7a3ad") no-repeat;
+    background-size: cover;
+    opacity: .6;
+}
+
+
 #page-content{
       color: white;
 }
@@ -16,6 +26,8 @@ body {
 a{
     color: white;
 }
+
+
 
 button {
     opacity: 0.4;
@@ -674,7 +686,9 @@ footer #tzine-actions iframe{
 
 
 .site-title {
+    margin-top: -5%;
     font-size: 100px;
+    /*text-shadow: 4px 4px 10px black;*/
 }
 
 
