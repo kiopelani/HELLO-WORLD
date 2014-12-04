@@ -84,8 +84,7 @@
             </li>
 
         <% elsif widget.name == "bart" %>
-
-            <li id="bart-box" data-col="1" data-row="1" data-sizex="3" data-sizey="4" style="background-color:black"><%= link_to '<button type="button">X</button>'.html_safe, "/bart/form", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "bart/form" %>  <br><center><div id="bart-box-box">Submit your search to plan your trip!</div></center></li>
+            <li id="bart-box" data-col="1" data-row="1" data-sizex="3" data-sizey="4" style="background-color:black"><%= link_to '<button type="button"><i class="fa fa-trash-o"> BART</i></button>'.html_safe, "/widgets/#{widget.id}", method: :delete, data: {confirm: 'Fosho?'}, :remote => true %>   <%= render "bart/form" %>  <br><center><div id="bart-box-box">Submit your search to plan your trip!</div></center></li>
 
         <% elsif widget.name == "wotd" %>
             <li id="widget-box" data-col="1" data-row="1" data-sizex="3" data-sizey="2" data-id="<%=widget.id %>" style="background-color: #5B8890">
