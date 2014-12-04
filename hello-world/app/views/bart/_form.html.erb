@@ -1,7 +1,9 @@
-<form name="myForm" id="bart-form" action="/bart" method="post" >
-  Where ya comin' from friend?
+<div class="container">
+  <p id="bart-header"> Smart Bart Planner </p>
+<form name="myForm" id="bart-form" class="navbar-form navbar-left" action="/bart" method="post" >
+  <h5>Where ya comin' from friend?</h5>
   <li>
-    <select name="origin">
+    <select name="origin" class="form-control">
       <option value="12TH">12th St. Oakland City Center</option>
       <option value="16TH">16th St. Mission</option>
       <option value="19TH">19th St. Oakland</option>
@@ -48,9 +50,9 @@
       <option value="WOAK">West Oakland</option>
     </select>
   </li>
-  Where ya headed sailor?
+  <h5>...and where ya headed sailor?</h5>
   <li>
-    <select name="destination">
+    <select name="destination" class="form-control">
       <option value="12TH">12th St. Oakland City Center</option>
       <option value="16TH">16th St. Mission</option>
       <option value="19TH">19th St. Oakland</option>
@@ -97,14 +99,15 @@
       <option value="WOAK">West Oakland</option>
     </select>
   </li>
-  What time do you need to be there?
+  <h5>In a rush I presume . . ?</h5>
   <li>
-    <input type="text" name="time" placeholder="h:mm+am/pm">
+    <input type="text" name="time" class="form-control" placeholder="h:mm+am/pm">
   </li>
-  <input type="submit" value="submit" id="bart-submit-button">
+  <br>
+  <input type="submit" value="Submit" id="bart-submit-button" class="btn btn-default">
 
 
 </form>
-
+</div>
 
 

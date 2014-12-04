@@ -20,7 +20,7 @@ class BartController < ApplicationController
     p '*' * 500
 
 
-    ugly = "Board your train at #{options[0][0]} at #{options[0][3]} headed towards #{options[3]}, and you will arrive at #{options[0][1]} at #{options[0][5]}. Bring $#{options[0][2]} for fare."
+    ugly = "Board your train at #{options[1][0]} at #{options[1][3]}, and you will arrive at #{options[1][1]} at #{options[1][5]}. Bring $#{options[1][2]} for fare. "
 
     p ugly
     p '-' * 500

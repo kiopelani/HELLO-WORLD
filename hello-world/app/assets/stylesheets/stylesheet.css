@@ -12,6 +12,15 @@ body {
   /*border: 30px solid black;*/
 }
 
+#bart-header{
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+#bart-box-box{
+    font-size: 14px;
+}
+
 #page-content{
       color: white;
 }
@@ -19,6 +28,7 @@ body {
 a{
     color: white;
 }
+
 
 button {
     opacity: 0.4;
