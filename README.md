@@ -2,7 +2,7 @@
 
 HELLO WORLD is a morning dashboard application that gives you the content you ACTUALLY care about seeing in the morning.
 
-To start your morning off the right way, create an account at [helloworld.com](http://helloworldftw.herokuapp.com/) or login with gmail to start building your own dashboard with our custom HELLO WORLD widgets.
+To start your morning off the right way, create an account at [helloworld.com](http://hello-world-ftw.herokuapp.com/) or login with gmail to start building your own dashboard with our custom HELLO WORLD widgets.
 
 ##Widgets
 Hello World currently has 16 widgets.
